@@ -1,8 +1,8 @@
 [
 	{
 		"displayText": "@condition_table",
-		"snippet": "Condition Table ${1:table name}{\n\trows:\n}",
-		"description": "A simple snippet."
+		"snippet": "ConditionTable '${1:table name}' {\n\tcondition: ${2:table condition}\n\trows:\n\t\t${3:row conditions}\n\tcolumn:\n\t\tname: '${4:column name}'\n\t\trange: [${5:col1,col2,col3,...}]\n}",
+		"description": "Table with condition rows"
 	},
 	{
 		"displayText": "@snippet2",
