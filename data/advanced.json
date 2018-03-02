@@ -1,7 +1,7 @@
 [
 	{
-		"displayText": "@snippet1",
-		"snippet": "Start typing to replace ${1:this text}.",
+		"displayText": "@condition_table",
+		"snippet": "Condition Table ${1:table name}{\n\trows:\n}",
 		"description": "A simple snippet."
 	},
 	{
