@@ -1,0 +1,1938 @@
+[
+  {
+    "description": "Jumbo",
+    "text": "JUMBO"
+  },
+  {
+    "description": "term > 15",
+    "text": "HAS_FICO_LTV_ADJ"
+  },
+  {
+    "description": "not combine into new loan and clvt > ltv",
+    "text": "HAS_SUBORDINATION"
+  },
+  {
+    "description": "Conforming",
+    "text": "CONFORMING"
+  },
+  {
+    "description": "Mi by lender",
+    "text": "MI_PAID_BY_LENDER"
+  },
+  {
+    "description": "NOT SUPPORT",
+    "text": "NULL_CONDITION"
+  },
+  {
+    "description": "All",
+    "text": "ALL"
+  },
+  {
+    "description": "Rate\/Term Refinance",
+    "text": "REFINANCE_RATE_TERM"
+  },
+  {
+    "description": "Purchase",
+    "text": "PM"
+  },
+  {
+    "description": "Owner",
+    "text": "OWNER"
+  },
+  {
+    "description": "Second Home",
+    "text": "SECOND_HOME"
+  },
+  {
+    "description": "Investment Property",
+    "text": "INVESTMENT"
+  },
+  {
+    "description": "Investment Property",
+    "text": "NOO"
+  },
+  {
+    "description": "HB",
+    "text": "HIGH_BALANCE"
+  },
+  {
+    "description": "Purchase\/RT",
+    "text": "PURCHASE_RT"
+  },
+  {
+    "description": "HB Purchase\/RT",
+    "text": "HB_PURCHASE_RT"
+  },
+  {
+    "description": "Cash Out",
+    "text": "CASH_OUT"
+  },
+  {
+    "description": "All Refinance",
+    "text": "ALL_REFINANCE"
+  },
+  {
+    "description": "ARM",
+    "text": "ARM"
+  },
+  {
+    "description": "Fixed",
+    "text": "FIXED"
+  },
+  {
+    "description": "Condo",
+    "text": "CONDO"
+  },
+  {
+    "description": "CoOps",
+    "text": "COOPS"
+  },
+  {
+    "description": "Single Family",
+    "text": "SINGLE_FAMILY"
+  },
+  {
+    "description": "Condo Investment Property",
+    "text": "CONDO_INVESTMENT"
+  },
+  {
+    "description": "Manufactured Housing",
+    "text": "MANUF"
+  },
+  {
+    "description": "Relocation",
+    "text": "RELOCATION"
+  },
+  {
+    "description": "New Construction",
+    "text": "NEWCONSTRUCTION"
+  },
+  {
+    "description": "10Yr",
+    "text": "TERM_10"
+  },
+  {
+    "description": ">10Yr",
+    "text": "TERM_GT_10"
+  },
+  {
+    "description": ">15Yr",
+    "text": "TERM_GT_15"
+  },
+  {
+    "description": "15Yr",
+    "text": "TERM_15"
+  },
+  {
+    "description": "20Yr",
+    "text": "TERM_20"
+  },
+  {
+    "description": "30Yr",
+    "text": "TERM_30"
+  },
+  {
+    "description": "<30Yr",
+    "text": "TERM_LT_30"
+  },
+  {
+    "description": ">=20Yr",
+    "text": "TERM_GTE_20"
+  },
+  {
+    "description": ">20Yr",
+    "text": "TERM_GT_20"
+  },
+  {
+    "description": "<=20Yr",
+    "text": "TERM_LTE_20"
+  },
+  {
+    "description": "<=25Yr",
+    "text": "TERM_LTE_25"
+  },
+  {
+    "description": "1-4 Unit",
+    "text": "UNIT_1_4"
+  },
+  {
+    "description": "1-Unit",
+    "text": "UNIT_1"
+  },
+  {
+    "description": "2-Unit",
+    "text": "UNIT_2"
+  },
+  {
+    "description": ">1-Unit",
+    "text": "MULTI_UNIT"
+  },
+  {
+    "description": "2-4 Unit",
+    "text": "UNIT_2_4"
+  },
+  {
+    "description": "3-4 Unit",
+    "text": "UNIT_3_4"
+  },
+  {
+    "description": "3 Unit",
+    "text": "UNIT_3"
+  },
+  {
+    "description": "4 Unit",
+    "text": "UNIT_4"
+  },
+  {
+    "description": "2-Unit Conforming",
+    "text": "UNIT_2_CONFORMING"
+  },
+  {
+    "description": "2-Unit HB",
+    "text": "UNIT_2_HB"
+  },
+  {
+    "description": "3-4 Unit Conforming",
+    "text": "UNIT_3_4_CONFORMING"
+  },
+  {
+    "description": "3-4 Unit HB",
+    "text": "UNIT_3_4_HB"
+  },
+  {
+    "description": "Loan Amounts > $417,000",
+    "text": "AMOUNT_GT_417k"
+  },
+  {
+    "description": "Loan Amounts > $424,100",
+    "text": "AMOUNT_GT_424_100"
+  },
+  {
+    "description": "Loan Amounts > $625,500",
+    "text": "AMOUNT_GT_625k"
+  },
+  {
+    "description": "Loan Amounts > $636,150",
+    "text": "AMOUNT_GT_636_150"
+  },
+  {
+    "description": "Loan Amounts > $453,100",
+    "text": "AMOUNT_GT_453_100"
+  },
+  {
+    "description": "Loan Amounts > $125K",
+    "text": "AMOUNT_GT_125K"
+  },
+  {
+    "description": "Loan Amounts > $650,000",
+    "text": "AMOUNT_GT_650k"
+  },
+  {
+    "description": "Loan Amounts > $1.8M",
+    "text": "AMOUNT_GT_1800k"
+  },
+  {
+    "description": "Loan Amounts < $50,000",
+    "text": "AMOUNT_LT_50k"
+  },
+  {
+    "description": "Loan Amounts <= $50,000",
+    "text": "AMOUNT_LTE_50k"
+  },
+  {
+    "description": "Loan Amounts $60,000-$100,000",
+    "text": "AMOUNT_60K_100K"
+  },
+  {
+    "description": "Loan Amounts $60,000-$99_999",
+    "text": "AMOUNT_60K_LT_100K"
+  },
+  {
+    "description": "Loan Amounts < $75,000",
+    "text": "AMOUNT_LT_75k"
+  },
+  {
+    "description": "Loan Amounts < $100,000",
+    "text": "AMOUNT_LT_100k"
+  },
+  {
+    "description": "Loan Amounts < $120,000",
+    "text": "AMOUNT_LT_120k"
+  },
+  {
+    "description": "Loan Amounts < $120,000",
+    "text": "AMOUNT_LT_140k"
+  },
+  {
+    "description": "Loan Amounts < $150,000",
+    "text": "AMOUNT_LT_150k"
+  },
+  {
+    "description": "Loan Amount (0 - 1000000)",
+    "text": "AMOUNT_LTE_1M"
+  },
+  {
+    "description": "Loan Amounts >= $1M",
+    "text": "AMOUNT_GTE_1M"
+  },
+  {
+    "description": "Loan Amounts > $1M",
+    "text": "AMOUNT_GT_1M"
+  },
+  {
+    "description": "Loan Amounts > $3M",
+    "text": "AMOUNT_GT_3M"
+  },
+  {
+    "description": "Loan Amounts >= $200,000",
+    "text": "AMOUNT_GTE_200K"
+  },
+  {
+    "description": "Loan Amounts > $200,000",
+    "text": "AMOUNT_GT_200K"
+  },
+  {
+    "description": "Loan Amounts $1M-$1.5M",
+    "text": "AMOUNT_1M_1500K"
+  },
+  {
+    "description": "Loan Amounts $1.5M-$2M",
+    "text": "AMOUNT_1500K_2M"
+  },
+  {
+    "description": "Loan Amount (1000001 - 1500000)",
+    "text": "AMOUNT_GT_1M_1500K"
+  },
+  {
+    "description": "Loan Amount (1000001 - 1800000)",
+    "text": "AMOUNT_GT_1M_1800K"
+  },
+  {
+    "description": "Loan Amount (1500001 - 2000000)",
+    "text": "AMOUNT_GT_1500K_2M"
+  },
+  {
+    "description": "Loan Amount (2000001 - 2500000)",
+    "text": "AMOUNT_GT_2M_2500K"
+  },
+  {
+    "description": "Loan Amount (2000001 - Max)",
+    "text": "AMOUNT_GT_2M"
+  },
+  {
+    "description": "Loan Amount (2500001 - Max)",
+    "text": "AMOUNT_GT_2500K"
+  },
+  {
+    "description": "Loan Amount (2500001 - 3000000)",
+    "text": "AMOUNT_GT_2500K_3000K"
+  },
+  {
+    "description": "Loan Amount (150001 - 175000)",
+    "text": "AMOUNT_150K_175K"
+  },
+  {
+    "description": "Loan Amount (175000 - 199000)",
+    "text": "AMOUNT_175K_LT_200K"
+  },
+  {
+    "description": "Loan Amount (150001 - 200000)",
+    "text": "AMOUNT_GT_150K_200K"
+  },
+  {
+    "description": "Loan Amount (150001 - 250000)",
+    "text": "AMOUNT_150K_250K"
+  },
+  {
+    "description": "Loan Amount (125001 - 150000)",
+    "text": "AMOUNT_125K_150K"
+  },
+  {
+    "description": "Loan Amount (100001 - 125000)",
+    "text": "AMOUNT_100K_125K"
+  },
+  {
+    "description": "Loan Amount (100001 - 150000)",
+    "text": "AMOUNT_GT_100K_150K"
+  },
+  {
+    "description": "Loan Amount (100000 - 124999)",
+    "text": "AMOUNT_100K_LT_125K"
+  },
+  {
+    "description": "Loan Amount (75001 - 100000)",
+    "text": "AMOUNT_75K_100K"
+  },
+  {
+    "description": "Loan Amount (100001 - 150000)",
+    "text": "AMOUNT_100K_150K"
+  },
+  {
+    "description": "Loan Amount (75000 - 99999)",
+    "text": "AMOUNT_75K_100K_EXC"
+  },
+  {
+    "description": "Loan Amount (75001 - 125000)",
+    "text": "AMOUNT_75K_125K"
+  },
+  {
+    "description": "Loan Amount (0 - 75000)",
+    "text": "AMOUNT_LTE75K"
+  },
+  {
+    "description": "Loan Amount (75001 - 99999)",
+    "text": "AMOUNT_GT75K_LT100K"
+  },
+  {
+    "description": "Loan Amount (75000 - 99999)",
+    "text": "AMOUNT_GTE75K_LT100K"
+  },
+  {
+    "description": "Loan Amount (75001 - 100000)",
+    "text": "AMOUNT_GT75K_100K"
+  },
+  {
+    "description": "Loan Amount (125001 - 200000)",
+    "text": "AMOUNT_GT125K_200K"
+  },
+  {
+    "description": "Loan Amount (125000 - 199999)",
+    "text": "AMOUNT_125K_LT_200K"
+  },
+  {
+    "description": "Loan Amount (200001 - 300000)",
+    "text": "AMOUNT_GT200K_300K"
+  },
+  {
+    "description": "Loan Amount (300001 - 417000)",
+    "text": "AMOUNT_GT300K_417K"
+  },
+  {
+    "description": "Loan Amount (300000 - 399999)",
+    "text": "AMOUNT_300K_LT_400K"
+  },
+  {
+    "description": "Loan Amount (400000 - 499999)",
+    "text": "AMOUNT_400K_LT_500K"
+  },
+  {
+    "description": "Loan Amount (500000 - 636150)",
+    "text": "AMOUNT_500K_636K"
+  },
+  {
+    "description": "Loan Amount (300000 - 416999)",
+    "text": "AMOUNT_300K_417K_EXC"
+  },
+  {
+    "description": "Loan Amount (300000 - 424100)",
+    "text": "AMOUNT_300K_424K_EXC"
+  },
+  {
+    "description": "Loan Amount (300000 - 453100)",
+    "text": "AMOUNT_300K_453101_EXC"
+  },
+  {
+    "description": "Loan Amount (300000 - 453100)",
+    "text": "AMOUNT_300K_453K100"
+  },
+  {
+    "description": "Loan Amount (150000 - 416999)",
+    "text": "AMOUNT_150K_417K_EXC"
+  },
+  {
+    "description": "Loan Amount (150000 - 424100)",
+    "text": "AMOUNT_150K_424K_EXC"
+  },
+  {
+    "description": "Loan Amount (150000 - 453100)",
+    "text": "AMOUNT_150K_453101_EXC"
+  },
+  {
+    "description": "Loan Amount (100000 - 149999)",
+    "text": "AMOUNT_100K_LT150K"
+  },
+  {
+    "description": "Loan Amount (100000 - 124999)",
+    "text": "AMOUNT_100K_LT125K"
+  },
+  {
+    "description": "Loan Amount (50000 - 99999)",
+    "text": "AMOUNT_50K_LT_100K"
+  },
+  {
+    "description": "Loan Amount (50000 - 100000)",
+    "text": "AMOUNT_GTE_50K_LTE_100K"
+  },
+  {
+    "description": "Loan Amount (50000 - 79999)",
+    "text": "AMOUNT_50K_LT_80K"
+  },
+  {
+    "description": "Loan Amount (50000 - 74999)",
+    "text": "AMOUNT_50K_LT_75K"
+  },
+  {
+    "description": "Loan Amount (80000 - 149999)",
+    "text": "AMOUNT_80K_LT_150K"
+  },
+  {
+    "description": "Loan Amount (50001 - 75000)",
+    "text": "AMOUNT_GT50K_75K"
+  },
+  {
+    "description": "Loan Amount (50001 - 75000)",
+    "text": "AMOUNT_GT50K_100K"
+  },
+  {
+    "description": "Loan Amount (0 - 24999)",
+    "text": "AMOUNT_LT_25K"
+  },
+  {
+    "description": "Loan Amount (25000 - 49999)",
+    "text": "AMOUNT_25K_LT_50k"
+  },
+  {
+    "description": "Loan Amount (0 - 34999)",
+    "text": "AMOUNT_LT_35K"
+  },
+  {
+    "description": "Loan Amount (35000 - 50000)",
+    "text": "AMOUNT_35K_50K"
+  },
+  {
+    "description": "Loan Amount (100000 - 149999)",
+    "text": "AMOUNT_100K_LT_150K"
+  },
+  {
+    "description": "Loan Amount (150000 - 199999)",
+    "text": "AMOUNT_150K_LT_200K"
+  },
+  {
+    "description": "Loan Amount (200000 - 249999)",
+    "text": "AMOUNT_200K_LT_250K"
+  },
+  {
+    "description": "Loan Amount (200000 - 274999)",
+    "text": "AMOUNT_200K_LT_275K"
+  },
+  {
+    "description": "Loan Amount (200000 - 417000)",
+    "text": "AMOUNT_200K_417K"
+  },
+  {
+    "description": "Loan Amount (200000 - 424100)",
+    "text": "AMOUNT_200K_424K"
+  },
+  {
+    "description": "Loan Amount (200000 - 453100)",
+    "text": "AMOUNT_200K_453K"
+  },
+  {
+    "description": "Loan Amount (250000 - Max)",
+    "text": "AMOUNT_GTE_250K"
+  },
+  {
+    "description": "Loan Amount (275000 - Max)",
+    "text": "AMOUNT_GTE_275K"
+  },
+  {
+    "description": "Loan Amounts >= $300,000",
+    "text": "AMOUNT_GTE_300K"
+  },
+  {
+    "description": "Loan Amount (250000 - 417000)",
+    "text": "AMOUNT_250K_417K"
+  },
+  {
+    "description": "Loan Amount (250000 - 424100)",
+    "text": "AMOUNT_250K_424100"
+  },
+  {
+    "description": "Loan Amount (250001 - 424100)",
+    "text": "AMOUNT_GT_250K_424100"
+  },
+  {
+    "description": "Loan Amount (424101 - 636150)",
+    "text": "AMOUNT_GT_424100_636150"
+  },
+  {
+    "description": "Loan Amount (636151 - Max)",
+    "text": "AMOUNT_GT_636150"
+  },
+  {
+    "description": "Loan Amount (679651 - Max)",
+    "text": "AMOUNT_GT_679650"
+  },
+  {
+    "description": "Loan Amount (250000 - 299999)",
+    "text": "AMOUNT_250K_LT_300K"
+  },
+  {
+    "description": "Loan Amount (300000 - 349999)",
+    "text": "AMOUNT_300K_LT_350K"
+  },
+  {
+    "description": "Loan Amount (350000 - 417000)",
+    "text": "AMOUNT_350K_417K"
+  },
+  {
+    "description": "Loan Amount (350000 - 424100)",
+    "text": "AMOUNT_350K_424K_EXC"
+  },
+  {
+    "description": "Loan Amount (375000 - 424100)",
+    "text": "AMOUNT_375_424K_EXC"
+  },
+  {
+    "description": "Loan Amount (375000 - 453100)",
+    "text": "AMOUNT_375_453101_EXC"
+  },
+  {
+    "description": "Loan Amount (350000 - 453100)",
+    "text": "AMOUNT_350_453101_EXC"
+  },
+  {
+    "description": "Loan Amount (75000 - 79999)",
+    "text": "AMOUNT_75K_80K_EXC"
+  },
+  {
+    "description": "Loan Amount (80000 - 99999)",
+    "text": "AMOUNT_80K_100K_EXC"
+  },
+  {
+    "description": "Loan Amount (80000 - 124999)",
+    "text": "AMOUNT_80K_125K_EXC"
+  },
+  {
+    "description": "Loan Amount (100000 - 124999)",
+    "text": "AMOUNT_100K_125K_EXC"
+  },
+  {
+    "description": "Loan Amount (125000 - 149999)",
+    "text": "AMOUNT_125K_150K_EXC"
+  },
+  {
+    "description": "Loan Amount (100000 - 149999)",
+    "text": "AMOUNT_100K_150K_EXC"
+  },
+  {
+    "description": "Loan Amount (150000 - 349999)",
+    "text": "AMOUNT_150K_350K_EXC"
+  },
+  {
+    "description": "Loan Amount (250000 - 299999)",
+    "text": "AMOUNT_250K_300K_EXC"
+  },
+  {
+    "description": "Loan Amount (300000 - 374999)",
+    "text": "AMOUNT_300K_375K_EXC"
+  },
+  {
+    "description": "Loan Amount (0 - 625000)",
+    "text": "AMOUNT_LE_625K"
+  },
+  {
+    "description": "Loan Amount (0 - 74999)",
+    "text": "AMOUNT_LE_75K"
+  },
+  {
+    "description": "Loan Amount (625001 - 1000000)",
+    "text": "AMOUNT_625K_1000K"
+  },
+  {
+    "description": "Loan Amount (1000001 - 1500000)",
+    "text": "AMOUNT_GT1000K_1500K"
+  },
+  {
+    "description": "Loan Amount (1500001 - 2000000)",
+    "text": "AMOUNT_GT1500K_2000K"
+  },
+  {
+    "description": "USDA",
+    "text": "USDA"
+  },
+  {
+    "description": "Escrow Waiver",
+    "text": "NO_ESCROW"
+  },
+  {
+    "description": "VA",
+    "text": "VA"
+  },
+  {
+    "description": "VA IRRRL",
+    "text": "VA_IRRRL"
+  },
+  {
+    "description": "All VA",
+    "text": "ALL_VA"
+  },
+  {
+    "description": "USDA",
+    "text": "GRH"
+  },
+  {
+    "description": "FHA",
+    "text": "FHA"
+  },
+  {
+    "description": "Conventional",
+    "text": "CONVENTIONAL"
+  },
+  {
+    "description": "HomeReady",
+    "text": "HOME_READY"
+  },
+  {
+    "description": "HomeReady",
+    "text": "HOME_POSSIBLE"
+  },
+  {
+    "description": "FHA Streamline",
+    "text": "FHA_STREAMLINE"
+  },
+  {
+    "description": "All FHA",
+    "text": "ALL_FHA"
+  },
+  {
+    "description": "Streamline or IRRRL",
+    "text": "FHA_STREAMLINE_OR_VA_IRRRL"
+  },
+  {
+    "description": "FHA\/VA",
+    "text": "FHA_OR_VA"
+  },
+  {
+    "description": "Government",
+    "text": "GOV"
+  },
+  {
+    "description": "Non FHA Streamline",
+    "text": "NON_FHA_STREAMLINE"
+  },
+  {
+    "description": "LP",
+    "text": "LP"
+  },
+  {
+    "description": "DU",
+    "text": "DU"
+  },
+  {
+    "description": "10Yr",
+    "text": "FIXED_TERM_10"
+  },
+  {
+    "description": "7Yr",
+    "text": "FIXED_TERM_7"
+  },
+  {
+    "description": "5Yr",
+    "text": "FIXED_TERM_5"
+  },
+  {
+    "description": "3Yr",
+    "text": "FIXED_TERM_3"
+  },
+  {
+    "description": "Term 10 Fixed Yr",
+    "text": "TERM_10_FIXED"
+  },
+  {
+    "description": "Term 15 Fixed Yr",
+    "text": "TERM_15_FIXED"
+  },
+  {
+    "description": "Term 25 Fixed Yr",
+    "text": "TERM_25_FIXED"
+  },
+  {
+    "description": "Term 30 Fixed Yr",
+    "text": "TERM_30_FIXED"
+  },
+  {
+    "description": "Term 30 Fixed Yr\/Term 15 Fixed Yr",
+    "text": "TERM_30_15_FIXED"
+  },
+  {
+    "description": "Term 20 Fixed Yr",
+    "text": "TERM_20_FIXED"
+  },
+  {
+    "description": ">=20 Fixed Yr",
+    "text": "TERM_GTE_20_FIXED"
+  },
+  {
+    "description": ">20 Fixed Yr",
+    "text": "TERM_GT_20_FIXED"
+  },
+  {
+    "description": "<=20 Fixed Yr Fixed",
+    "text": "TERM_LTE_20_FIXED_PRODUCT"
+  },
+  {
+    "description": "7Yr ARM",
+    "text": "TERM_7_ARM"
+  },
+  {
+    "description": "5Yr ARM",
+    "text": "TERM_5_ARM"
+  },
+  {
+    "description": "3Yr ARM",
+    "text": "TERM_3_ARM"
+  },
+  {
+    "description": "10Yr ARM",
+    "text": "TERM_10_ARM"
+  },
+  {
+    "description": "Subordinate",
+    "text": "SUBORDINATE"
+  },
+  {
+    "description": "In states: [CA]",
+    "text": "STATE_CA"
+  },
+  {
+    "description": "In states: [WA]",
+    "text": "STATE_WA"
+  },
+  {
+    "description": "In states: [HI]",
+    "text": "STATE_HI"
+  },
+  {
+    "description": "In states: [NY]",
+    "text": "STATE_NY"
+  },
+  {
+    "description": "In states: [NJ]",
+    "text": "STATE_NJ"
+  },
+  {
+    "description": "In states: [IL]",
+    "text": "STATE_IL"
+  },
+  {
+    "description": "In states: [TX]",
+    "text": "STATE_TX"
+  },
+  {
+    "description": "In states: [PA]",
+    "text": "STATE_PA"
+  },
+  {
+    "description": "In states: [DE]",
+    "text": "STATE_DE"
+  },
+  {
+    "description": "In states: [MD]",
+    "text": "STATE_MD"
+  },
+  {
+    "description": "In states: [ME]",
+    "text": "STATE_ME"
+  },
+  {
+    "description": "In states: [VA]",
+    "text": "STATE_VA"
+  },
+  {
+    "description": "In states: [FL]",
+    "text": "STATE_FL"
+  },
+  {
+    "description": "In states: [DC]",
+    "text": "STATE_DC"
+  },
+  {
+    "description": "NOT In states: [CA]",
+    "text": "STATE_NOT_CA"
+  },
+  {
+    "description": "NOT In states: [HI]",
+    "text": "STATE_NOT_HI"
+  },
+  {
+    "description": "NOT In states: [NY]",
+    "text": "STATE_NOT_NY"
+  },
+  {
+    "description": "NOT In states: [IL]",
+    "text": "STATE_NOT_IL"
+  },
+  {
+    "description": "In states: [FL, NV]",
+    "text": "STATE_FL_NV"
+  },
+  {
+    "description": "NOT In states: [TX, PA]",
+    "text": "STATE_NOT_TX_PA"
+  },
+  {
+    "description": "In states: [ME, OH, FL, IL, NJ]",
+    "text": "STATE_ME_OH_FL_IL_NJ"
+  },
+  {
+    "description": "NOT In states: [ME, OH, FL, IL, NJ]",
+    "text": "STATE_NOT_ME_OH_FL_IL_NJ"
+  },
+  {
+    "description": "In states: [HI, AK]",
+    "text": "STATE_HI_AK"
+  },
+  {
+    "description": "In states: [CA, NY]",
+    "text": "STATE_CA_NY"
+  },
+  {
+    "description": "NOT In states: [CA, NY]",
+    "text": "STATE_NOT_CA_NY"
+  },
+  {
+    "description": "In states: [CA, IA, NY, NJ, MO]",
+    "text": "STATE_CA_IA_NY_NJ_MO"
+  },
+  {
+    "description": "Escrow Waiver NOT In states: [DC, CA, IA, IL, NJ, NY]",
+    "text": "NO_ESCROW_FREEDOM"
+  },
+  {
+    "description": "In states: [CA] Term 30 Fixed Yr",
+    "text": "STATE_CA_TERM_30_FIXED"
+  },
+  {
+    "description": "NOT In states: [CA] Term 30 Fixed Yr",
+    "text": "STATE_NOT_CA_TERM_30_FIXED"
+  },
+  {
+    "description": "Escrow Waiver In states: [CA]",
+    "text": "NO_ESCROW_IN_CA"
+  },
+  {
+    "description": "Escrow Waiver NOT In states: [CA]",
+    "text": "NO_ESCROW_NOT_IN_CA"
+  },
+  {
+    "description": "Escrow Waiver NOT In states: [CA, NY]",
+    "text": "NO_ESCROW_NOT_IN_CA_NY"
+  },
+  {
+    "description": "LTV > 60",
+    "text": "LTV_GT_60"
+  },
+  {
+    "description": "LTV > 65",
+    "text": "LTV_GT_65"
+  },
+  {
+    "description": "LTV > 75",
+    "text": "LTV_GT_75"
+  },
+  {
+    "description": "LTV > 70",
+    "text": "LTV_GT_70"
+  },
+  {
+    "description": "LTV > 80",
+    "text": "LTV_GT_80"
+  },
+  {
+    "description": "LTV > 85",
+    "text": "LTV_GT_85"
+  },
+  {
+    "description": "LTV > 90",
+    "text": "LTV_GT_90"
+  },
+  {
+    "description": "LTV > 95",
+    "text": "LTV_GT_95"
+  },
+  {
+    "description": "LTV <= 70",
+    "text": "LTV_LTE_70"
+  },
+  {
+    "description": "LTV <= 75",
+    "text": "LTV_LTE_75"
+  },
+  {
+    "description": "LTV <= 65",
+    "text": "LTV_LTE_65"
+  },
+  {
+    "description": "LTV <= 60",
+    "text": "LTV_LTE_60"
+  },
+  {
+    "description": "LTV < 80",
+    "text": "LTV_LT_80"
+  },
+  {
+    "description": "LTV <= 80",
+    "text": "LTV_LTE_80"
+  },
+  {
+    "description": "LTV <= 85",
+    "text": "LTV_LTE_85"
+  },
+  {
+    "description": "LTV <= 95",
+    "text": "LTV_LTE_95"
+  },
+  {
+    "description": "LTV <= 90",
+    "text": "LTV_LTE_90"
+  },
+  {
+    "description": "LTV <=105",
+    "text": "LTV_LTE_105"
+  },
+  {
+    "description": "LTV <= 110",
+    "text": "LTV_LTE_110"
+  },
+  {
+    "description": "75 < LTV <= 80",
+    "text": "LTV_75_80"
+  },
+  {
+    "description": "60 < LTV <= 75",
+    "text": "LTV_60_75"
+  },
+  {
+    "description": "80 < LTV <= 85",
+    "text": "LTV_80_85"
+  },
+  {
+    "description": "80 <= LTV <= 85",
+    "text": "LTV_GTE_80_LTE_85"
+  },
+  {
+    "description": "LTV > 110",
+    "text": "LTV_GT_110"
+  },
+  {
+    "description": "LTV > 100",
+    "text": "LTV_GT_100"
+  },
+  {
+    "description": "LTV >125",
+    "text": "LTV_GT_125"
+  },
+  {
+    "description": "110 < LTV <= 125",
+    "text": "LTV_110_125"
+  },
+  {
+    "description": "105 < LTV <= 125",
+    "text": "LTV_105_125"
+  },
+  {
+    "description": "LTV > 105",
+    "text": "LTV_GT_105"
+  },
+  {
+    "description": "65 < LTV <= 75",
+    "text": "LTV_65_75"
+  },
+  {
+    "description": "60 < LTV <= 70",
+    "text": "LTV_60_70"
+  },
+  {
+    "description": "60 < LTV <= 65",
+    "text": "LTV_60_65"
+  },
+  {
+    "description": "65 < LTV <= 70",
+    "text": "LTV_65_70"
+  },
+  {
+    "description": "70 < LTV <= 75",
+    "text": "LTV_70_75"
+  },
+  {
+    "description": "75 < LTV <= 90",
+    "text": "LTV_75_90"
+  },
+  {
+    "description": "75 < LTV <= 95",
+    "text": "LTV_75_95"
+  },
+  {
+    "description": "85 < LTV <= 90",
+    "text": "LTV_85_90"
+  },
+  {
+    "description": "85 < LTV <= 95",
+    "text": "LTV_85_95"
+  },
+  {
+    "description": "80 < LTV <= 90",
+    "text": "LTV_80_90"
+  },
+  {
+    "description": "80 < LTV <= 95",
+    "text": "LTV_80_95"
+  },
+  {
+    "description": "90 < LTV <= 95",
+    "text": "LTV_90_95"
+  },
+  {
+    "description": "90 < LTV <= 100",
+    "text": "LTV_90_100"
+  },
+  {
+    "description": "70 < LTV <= 90",
+    "text": "LTV_70_90"
+  },
+  {
+    "description": "70 < LTV <= 80",
+    "text": "LTV_70_80"
+  },
+  {
+    "description": "95 < LTV <= 100",
+    "text": "LTV_95_100"
+  },
+  {
+    "description": "95 < LTV <= 115",
+    "text": "LTV_95_115"
+  },
+  {
+    "description": "115 < LTV <= 125",
+    "text": "LTV_115_125"
+  },
+  {
+    "description": "95.01 < LTV <= 97",
+    "text": "LTV_95_97"
+  },
+  {
+    "description": "100 < LTV <= 105",
+    "text": "LTV_100_105"
+  },
+  {
+    "description": "100 < LTV <= 105",
+    "text": "LTV_95_1033"
+  },
+  {
+    "description": "In states: [DC, NM] LTV <= 80",
+    "text": "STATE_DC_NM_LTV_LTE_80"
+  },
+  {
+    "description": "In states: [NY] CoOps",
+    "text": "NY_COOPS"
+  },
+  {
+    "description": "100.01 <= CLTV <= 125",
+    "text": "CLTV_100_125"
+  },
+  {
+    "description": "CLTV <= 80",
+    "text": "CLTV_LTE_80"
+  },
+  {
+    "description": "CLTV <= 75",
+    "text": "CLTV_LTE_75"
+  },
+  {
+    "description": "CLTV <= 76",
+    "text": "CLTV_LTE_76"
+  },
+  {
+    "description": "CLTV <= 95",
+    "text": "CLTV_LTE_95"
+  },
+  {
+    "description": "80 < CLTV <= 95",
+    "text": "CLTV_80_95"
+  },
+  {
+    "description": "80 < CLTV <= 90",
+    "text": "CLTV_80_90"
+  },
+  {
+    "description": "90 < CLTV <= 95",
+    "text": "CLTV_90_95"
+  },
+  {
+    "description": "75 < CLTV <= 90",
+    "text": "CLTV_75_90"
+  },
+  {
+    "description": "75 < CLTV <= 80",
+    "text": "CLTV_75_80"
+  },
+  {
+    "description": "75 < CLTV <= 95",
+    "text": "CLTV_75_95"
+  },
+  {
+    "description": "95 < CLTV <= 97",
+    "text": "CLTV_95_97"
+  },
+  {
+    "description": "90 < CLTV <= 97",
+    "text": "CLTV_90_97"
+  },
+  {
+    "description": "76 < CLTV <= 80",
+    "text": "CLTV_76_80"
+  },
+  {
+    "description": "76 < CLTV <= 90",
+    "text": "CLTV_76_90"
+  },
+  {
+    "description": "76 < CLTV <= 95",
+    "text": "CLTV_76_95"
+  },
+  {
+    "description": "CLTV > 100.00%",
+    "text": "CLTV_GT_100"
+  },
+  {
+    "description": "CLTV > 95.00%",
+    "text": "CLTV_GT_95"
+  },
+  {
+    "description": "CLTV > 90.00%",
+    "text": "CLTV_GT_90"
+  },
+  {
+    "description": "CLTV > 75.00%",
+    "text": "CLTV_GT_75"
+  },
+  {
+    "description": "CLTV > 97.00%",
+    "text": "CLTV_GT_97"
+  },
+  {
+    "description": "LTV > 97.00%",
+    "text": "LTV_GT_97"
+  },
+  {
+    "description": "NOT Government NOT Jumbo Mi by lender LTV (80 - 100)",
+    "text": "LPMI"
+  },
+  {
+    "description": "Borrower Paid MI",
+    "text": "BPMI"
+  },
+  {
+    "description": "No Credit Score",
+    "text": "NO_CREDIT"
+  },
+  {
+    "description": "620 <= FICO <= 679",
+    "text": "FICO_620_679"
+  },
+  {
+    "description": "680 <= FICO <= 739",
+    "text": "FICO_680_739"
+  },
+  {
+    "description": "660 <= FICO <= 679",
+    "text": "FICO_660_679"
+  },
+  {
+    "description": "660 <= FICO <= 699",
+    "text": "FICO_660_699"
+  },
+  {
+    "description": "660 <= FICO <= 719",
+    "text": "FICO_660_719"
+  },
+  {
+    "description": "640 <= FICO <= 679",
+    "text": "FICO_640_679"
+  },
+  {
+    "description": "640 <= FICO <= 659",
+    "text": "FICO_640_659"
+  },
+  {
+    "description": "620 <= FICO <= 639",
+    "text": "FICO_620_639"
+  },
+  {
+    "description": "600 <= FICO <= 619",
+    "text": "FICO_600_619"
+  },
+  {
+    "description": "600 <= FICO <= 639",
+    "text": "FICO_600_639"
+  },
+  {
+    "description": "550 <= FICO <= 579",
+    "text": "FICO_550_579"
+  },
+  {
+    "description": "550 <= FICO <= 619",
+    "text": "FICO_550_619"
+  },
+  {
+    "description": "540 <= FICO <= 559",
+    "text": "FICO_540_559"
+  },
+  {
+    "description": "550 <= FICO <= 559",
+    "text": "FICO_550_559"
+  },
+  {
+    "description": "500 <= FICO <= 559",
+    "text": "FICO_500_559"
+  },
+  {
+    "description": "500 <= FICO <= 549",
+    "text": "FICO_500_549"
+  },
+  {
+    "description": "580 <= FICO <= 599",
+    "text": "FICO_580_599"
+  },
+  {
+    "description": "560 <= FICO <= 579",
+    "text": "FICO_560_579"
+  },
+  {
+    "description": "560 <= FICO <= 599",
+    "text": "FICO_560_599"
+  },
+  {
+    "description": "560 <= FICO <= 619",
+    "text": "FICO_560_619"
+  },
+  {
+    "description": "580 <= FICO <= 639",
+    "text": "FICO_580_639"
+  },
+  {
+    "description": "580 <= FICO <= 619",
+    "text": "FICO_580_619"
+  },
+  {
+    "description": "700 <= FICO <= 719",
+    "text": "FICO_700_719"
+  },
+  {
+    "description": "740 <= FICO",
+    "text": "FICO_740_850"
+  },
+  {
+    "description": "780 <= FICO <= 799",
+    "text": "FICO_780_799"
+  },
+  {
+    "description": "720 <= FICO <= 759",
+    "text": "FICO_720_759"
+  },
+  {
+    "description": "720 <= FICO",
+    "text": "FICO_720_850"
+  },
+  {
+    "description": "FICO <= 599",
+    "text": "FICO_LTE_599"
+  },
+  {
+    "description": "FICO <= 580",
+    "text": "FICO_LTE_580"
+  },
+  {
+    "description": "FICO <= 700",
+    "text": "FICO_LTE_700"
+  },
+  {
+    "description": "FICO <= 680",
+    "text": "FICO_LTE_680"
+  },
+  {
+    "description": "FICO >= 580",
+    "text": "FICO_GTE_580"
+  },
+  {
+    "description": "FICO >= 620",
+    "text": "FICO_GTE_620"
+  },
+  {
+    "description": "FICO >= 640",
+    "text": "FICO_GTE_640"
+  },
+  {
+    "description": "FICO >= 660",
+    "text": "FICO_GTE_660"
+  },
+  {
+    "description": "FICO >= 680",
+    "text": "FICO_GTE_680"
+  },
+  {
+    "description": "FICO >= 700",
+    "text": "FICO_GTE_700"
+  },
+  {
+    "description": "FICO >= 720",
+    "text": "FICO_GTE_720"
+  },
+  {
+    "description": "740 <= FICO",
+    "text": "FICO_GTE_740"
+  },
+  {
+    "description": "760 <= FICO",
+    "text": "FICO_GTE_760"
+  },
+  {
+    "description": "FICO >= 780",
+    "text": "FICO_GTE_780"
+  },
+  {
+    "description": "FICO >= 800",
+    "text": "FICO_GTE_800"
+  },
+  {
+    "description": "760 <= FICO <= 799",
+    "text": "FICO_760_799"
+  },
+  {
+    "description": "760 <= FICO <= 779",
+    "text": "FICO_760_779"
+  },
+  {
+    "description": "740 <= FICO <= 759",
+    "text": "FICO_740_759"
+  },
+  {
+    "description": "720 <= FICO <= 739",
+    "text": "FICO_720_739"
+  },
+  {
+    "description": "720 <= FICO <= 779",
+    "text": "FICO_720_779"
+  },
+  {
+    "description": "680 <= FICO <= 719",
+    "text": "FICO_680_719"
+  },
+  {
+    "description": "680 <= FICO <= 699",
+    "text": "FICO_680_699"
+  },
+  {
+    "description": "680 <= FICO <= 700",
+    "text": "FICO_680_700"
+  },
+  {
+    "description": "700 <= FICO <= 739",
+    "text": "FICO_700_739"
+  },
+  {
+    "description": "620 <= FICO <= 659",
+    "text": "FICO_620_659"
+  },
+  {
+    "description": "FICO < 720",
+    "text": "FICO_LT_720"
+  },
+  {
+    "description": "FICO < 700",
+    "text": "FICO_LT_700"
+  },
+  {
+    "description": "FICO < 580",
+    "text": "FICO_LT_580"
+  },
+  {
+    "description": "FICO < 560",
+    "text": "FICO_LT_560"
+  },
+  {
+    "description": "FICO < 550",
+    "text": "FICO_LT_550"
+  },
+  {
+    "description": "FICO < 500",
+    "text": "FICO_LT_500"
+  },
+  {
+    "description": "FICO < 540",
+    "text": "FICO_LT_540"
+  },
+  {
+    "description": "FICO < 600",
+    "text": "FICO_LT_600"
+  },
+  {
+    "description": "FICO < 620",
+    "text": "FICO_LT_620"
+  },
+  {
+    "description": "0 < FICO < 620",
+    "text": "FICO_LT_620_NOT_NO_CREDIT"
+  },
+  {
+    "description": "FICO < 640",
+    "text": "FICO_LT_640"
+  },
+  {
+    "description": "FICO < 660",
+    "text": "FICO_LT_660"
+  },
+  {
+    "description": "FICO < 680",
+    "text": "FICO_LT_680"
+  },
+  {
+    "description": "LP LTV <= 75",
+    "text": "LP_LTV_LTE_75"
+  },
+  {
+    "description": "Investment Property LTV <= 75",
+    "text": "INVESTMENT_LTE_75"
+  },
+  {
+    "description": "Investment Property 75 < LTV <= 80",
+    "text": "INVESTMENT_75_80"
+  },
+  {
+    "description": "Investment Property 80 < LTV <= 85",
+    "text": "INVESTMENT_80_85"
+  },
+  {
+    "description": "Investment Property LTV > 80",
+    "text": "INVESTMENT_GT_80"
+  },
+  {
+    "description": "VA IRRRL 110 < LTV <= 125",
+    "text": "VA_IRRRL_LTV_110_125"
+  },
+  {
+    "description": "VA IRRRL LTV > 110",
+    "text": "VA_IRRRL_LTV_GT_110"
+  },
+  {
+    "description": "VA IRRRL Second Home",
+    "text": "VA_IRRRL_SECOND_HOME"
+  },
+  {
+    "description": "VA IRRRL Investment Property",
+    "text": "VA_IRRRL_INVESTMENT"
+  },
+  {
+    "description": "Rate\/Term Refinance Streamline or IRRRL",
+    "text": "FHA_STREAMLINE_OR_VA_IRRRL_REFINANCE"
+  },
+  {
+    "description": "Rate\/Term Refinance VA IRRRL",
+    "text": "VA_IRRRL_REFINANCE"
+  },
+  {
+    "description": "Rate\/Term Refinance VA",
+    "text": "VA_REFINANCE"
+  },
+  {
+    "description": "FHA\/VA 15Yr",
+    "text": "FHA_VA_TERM_15"
+  },
+  {
+    "description": "2-Unit Non FHA Streamline",
+    "text": "UNIT_2_NON_STREAMLINE"
+  },
+  {
+    "description": "3-4 Unit Non FHA Streamline",
+    "text": "UNIT_3_4_NON_STREAMLINE"
+  },
+  {
+    "description": "2-Unit FHA Streamline",
+    "text": "UNIT_2_STREAMLINE"
+  },
+  {
+    "description": "3-4 Unit FHA Streamline",
+    "text": "UNIT_3_4_STREAMLINE"
+  },
+  {
+    "description": "Condo LTV > 75",
+    "text": "CONDO_LTV_GT_75"
+  },
+  {
+    "description": "Condo LTV > 75 >15Yr",
+    "text": "CONDO_LTV_GT_75_TERM_GT_15"
+  },
+  {
+    "description": "Condo >15Yr",
+    "text": "CONDO_TERM_GT_15"
+  },
+  {
+    "description": "HB Cash Out",
+    "text": "HB_CASHOUT"
+  },
+  {
+    "description": "HB Cash Out ARM",
+    "text": "HB_CASHOUT_ARM"
+  },
+  {
+    "description": "HB Cash Out Fixed",
+    "text": "HB_CASHOUT_FIXED"
+  },
+  {
+    "description": "HB ARM",
+    "text": "HB_ARM"
+  },
+  {
+    "description": "HB Fixed",
+    "text": "HB_FIXED"
+  },
+  {
+    "description": "HB Rate\/Term Refinance",
+    "text": "HB_RT"
+  },
+  {
+    "description": "HB Term 10 Fixed Yr",
+    "text": "HB_TERM_10_FIXED"
+  },
+  {
+    "description": "HB Term 20 Fixed Yr",
+    "text": "HB_TERM_20_FIXED"
+  },
+  {
+    "description": "HB Term 20 Fixed Yr",
+    "text": "HB_TERM_20_ARM"
+  },
+  {
+    "description": "HB LP",
+    "text": "HB_LP"
+  },
+  {
+    "description": "HB FHA\/VA 15Yr",
+    "text": "HB_FHA_VA_TERM_15"
+  },
+  {
+    "description": "Purchase\/RT Fixed",
+    "text": "PURCHASE_RT_FIXED"
+  },
+  {
+    "description": "Purchase\/RT ARM",
+    "text": "PURCHASE_RT_ARM"
+  },
+  {
+    "description": "HB Purchase\/RT Fixed",
+    "text": "HB_PURCHASE_RT_FIXED"
+  },
+  {
+    "description": "HB Purchase\/RT ARM",
+    "text": "HB_PURCHASE_RT_ARM"
+  },
+  {
+    "description": "Condo In states: [CA]",
+    "text": "CONDO_CA"
+  },
+  {
+    "description": "NOT Government NOT Jumbo Mi by lender LTV (80 - 100) Second Home",
+    "text": "LPMI_SECOND_HOME"
+  },
+  {
+    "description": "NOT Government NOT Jumbo Mi by lender LTV (80 - 100) Cash Out",
+    "text": "LPMI_CASHOUT"
+  },
+  {
+    "description": "VA Cash Out",
+    "text": "VA_CASHOUT"
+  },
+  {
+    "description": "All VA Cash Out",
+    "text": "ALL_VA_CASHOUT"
+  },
+  {
+    "description": "VA HB",
+    "text": "VA_HB"
+  },
+  {
+    "description": "VA IRRRL HB",
+    "text": "VA_IRRRL_HB"
+  },
+  {
+    "description": "FHA Streamline Conforming\/VA IRRRL HB",
+    "text": "FHA_STREAMLINE_CONF_OR_VA_IRRRL_HB"
+  },
+  {
+    "description": "NOT FHA Streamline Conforming\/VA IRRRL HB",
+    "text": "NOT_FHA_STREAMLINE_CONF_VA_IRRRL_HB"
+  },
+  {
+    "description": "VA HB Loan Amounts $1M-$1.5M",
+    "text": "VA_HB_AMOUNT_1M_1500K"
+  },
+  {
+    "description": "VA IRRRL HB Loan Amounts >= $1M",
+    "text": "VA_IRRRL_HB_AMOUNT_GTE_1M"
+  },
+  {
+    "description": "FHA Streamline 100.01 <= CLTV <= 125",
+    "text": "FHA_STREAMLINE_CLTV_100_125"
+  },
+  {
+    "description": "VA IRRRL 100 < LTV <= 105",
+    "text": "VA_IRRRL_LTV_100_105"
+  },
+  {
+    "description": "VA IRRRL LTV > 105",
+    "text": "VA_IRRRL_LTV_GT_105"
+  },
+  {
+    "description": "VA 90 < LTV <= 95 In states: [ME, OH, FL, IL, NJ]",
+    "text": "VA_LTV_90_95_ME_OH_FL_IL_NJ"
+  },
+  {
+    "description": "VA 100 < LTV <= 105",
+    "text": "VA_LTV_95_1033"
+  },
+  {
+    "description": "VA 100 < LTV <= 105 NOT In states: [ME, OH, FL, IL, NJ]",
+    "text": "VA_LTV_95_1033_EXCEPT_ME_OH_FL_IL_NJ"
+  },
+  {
+    "description": "VA 100 < LTV <= 105 In states: [ME, OH, FL, IL, NJ]",
+    "text": "VA_LTV_95_1033_ME_OH_FL_IL_NJ"
+  },
+  {
+    "description": "NOT VA IRRRL",
+    "text": "NON_IRRRL"
+  },
+  {
+    "description": "VA IRRRL HB 660 <= FICO <= 679",
+    "text": "FICO_660_679_VA_IRRRL_HB"
+  },
+  {
+    "description": "FHA Streamline 640 <= FICO <= 679",
+    "text": "FICO_640_679_FHA_STREAMLINE"
+  },
+  {
+    "description": "NOT FHA Streamline Conforming\/VA IRRRL HB 660 <= FICO <= 679",
+    "text": "FICO_660_679_EXCEPT_FHA_STREAMLINE_CONF_VA_IRRRL_HB"
+  },
+  {
+    "description": "NOT FHA Streamline Conforming\/VA IRRRL HB 640 <= FICO <= 659",
+    "text": "FICO_640_659_EXCEPT_FHA_STREAMLINE_CONF_VA_IRRRL_HB"
+  },
+  {
+    "description": "VA IRRRL HB 640 <= FICO <= 659",
+    "text": "FICO_640_659_VA_IRRRL_HB"
+  },
+  {
+    "description": "2-4 Unit In states: [NJ]",
+    "text": "UNIT_2_4_NJ"
+  },
+  {
+    "description": "All VA Cash Out LTV > 90",
+    "text": "ALL_VA_CASHOUT_LTV_GT_90"
+  },
+  {
+    "description": "VA Cash Out LTV <= 95",
+    "text": "VA_CASHOUT_LTV_LTE_95"
+  },
+  {
+    "description": "VA Cash Out 95 < LTV <= 100",
+    "text": "VA_CASHOUT_LTV_95_100"
+  },
+  {
+    "description": "VA Cash Out 90 < LTV <= 100",
+    "text": "VA_CASHOUT_LTV_90_100"
+  },
+  {
+    "description": "NOT HB",
+    "text": "NOT_HB"
+  },
+  {
+    "description": "Investment Property LTV <= 75 NOT HB",
+    "text": "INVESTMENT_LTE_75_NOT_HB"
+  },
+  {
+    "description": "Investment Property LTV <= 75 HB",
+    "text": "INVESTMENT_LTE_75_HB"
+  },
+  {
+    "description": "Investment Property 75 < LTV <= 80 NOT HB",
+    "text": "INVESTMENT_75_80_NOT_HB"
+  },
+  {
+    "description": "Investment Property 75 < LTV <= 80 HB",
+    "text": "INVESTMENT_75_80_HB"
+  },
+  {
+    "description": "Escrow Waiver In states: [CA]",
+    "text": "ESCROW_WAIVER_CA"
+  },
+  {
+    "description": "Escrow Waiver NOT In states: [CA]",
+    "text": "ESCROW_WAIVER_NOT_CA"
+  },
+  {
+    "description": "Escrow Waiver NOT In states: [CA] NOT In states: [NY]",
+    "text": "ESCROW_WAIVER_NOT_CA_NY"
+  },
+  {
+    "description": "HB ARM LTV <= 75",
+    "text": "HB_ARM_LTV_LTE_75"
+  },
+  {
+    "description": "HB ARM LTV > 75",
+    "text": "HB_ARM_LTV_GT_75"
+  },
+  {
+    "description": "HB ARM 75 < LTV <= 90",
+    "text": "HB_ARM_LTV_75_90"
+  },
+  {
+    "description": "NOT Government NOT Jumbo Mi by lender LTV (80 - 100) Cash Out 80 < LTV <= 85",
+    "text": "CASH_OUT_LPMI_LTV_80_85"
+  },
+  {
+    "description": "3-4 Unit LTV <= 80",
+    "text": "UNIT_3_4_LTV_LTE_80"
+  },
+  {
+    "description": "3-4 Unit 80 < LTV <= 85",
+    "text": "UNIT_3_4_LTV_80_85"
+  },
+  {
+    "description": "3-4 Unit LTV > 85",
+    "text": "UNIT_3_4_LTV_GT_85"
+  },
+  {
+    "description": "Purchase\/RT ARM LTV <= 75",
+    "text": "PURCHASE_RT_ARM_LTV_LTE_75"
+  },
+  {
+    "description": "Purchase\/RT ARM LTV > 75",
+    "text": "PURCHASE_RT_ARM_LTV_GT_75"
+  },
+  {
+    "description": "FHA Streamline Rate\/Term Refinance Investment Property",
+    "text": "STREAMLINE_REFI_NOO"
+  },
+  {
+    "description": "NOT Government NOT Jumbo Mi by lender LTV (80 - 100) >20Yr Purchase\/Owner",
+    "text": "SINGLE_PREMIUM_LPMI"
+  },
+  {
+    "description": "Conforming\/HB",
+    "text": "NON_JUMBO"
+  },
+  {
+    "description": "Manufactured Housing Cash Out",
+    "text": "MANUF_CASHOUT"
+  },
+  {
+    "description": "Manufactured Housing Purchase\/RT",
+    "text": "MANUF_PURCHASE_RT"
+  },
+  {
+    "description": "Manufactured Housing New Construction",
+    "text": "MANUF_NEWCONSTRUCTION"
+  },
+  {
+    "description": "In states: [TX] Cash Out",
+    "text": "TX_CASHOUT"
+  },
+  {
+    "description": "2-4 Unit Owner",
+    "text": "UNIT_2_4_OWNER"
+  },
+  {
+    "description": "Investment Property\/Second Home",
+    "text": "INVESTMENT_2ND_HOME"
+  },
+  {
+    "description": "NOT Government NOT Jumbo Mi by lender LTV (80 - 100) NOT In states: [WA]",
+    "text": "LPMI_NOT_WA"
+  },
+  {
+    "description": "Secondary Financing",
+    "text": "SECOND_FINANCING"
+  },
+  {
+    "description": "WEST",
+    "text": "WEST_CONDITION"
+  },
+  {
+    "description": "EAST",
+    "text": "EAST_CONDITION"
+  },
+  {
+    "description": "DU ARM",
+    "text": "DU_ARM"
+  },
+  {
+    "description": "LP ARM",
+    "text": "LP_ARM"
+  },
+  {
+    "description": "DU Fixed",
+    "text": "DU_FIXED"
+  },
+  {
+    "description": "Conf fixed du",
+    "text": "CONFORMING_FIXED_DU"
+  },
+  {
+    "description": "LP Fixed",
+    "text": "LP_FIXED"
+  },
+  {
+    "description": "Conf fixed lp",
+    "text": "CONFORMING_FIXED_LP"
+  },
+  {
+    "description": "Conf arm",
+    "text": "CONFORMING_ARM"
+  },
+  {
+    "description": "Conf fixed",
+    "text": "CONFORMING_FIXED"
+  },
+  {
+    "description": "Hb Arm Du",
+    "text": "HB_ARM_DU"
+  },
+  {
+    "description": "Hb Arm Lp",
+    "text": "HB_ARM_LP"
+  },
+  {
+    "description": "Term 30 Fixed Yr FHA Conforming Loan Amount (175000 - Max) FICO >= 720",
+    "text": "FHA_SELECT"
+  },
+  {
+    "description": "Term > 16",
+    "text": "TERM_GREATER_15"
+  },
+  {
+    "description": "HB LP",
+    "text": "SUPER_CONF"
+  },
+  {
+    "description": "Tier 1",
+    "text": "TIER_1"
+  },
+  {
+    "description": "Tier 2",
+    "text": "TIER_2"
+  },
+  {
+    "description": "Tier 3",
+    "text": "TIER_3"
+  },
+  {
+    "description": "Tier 4",
+    "text": "TIER_4"
+  },
+  {
+    "description": "Tier 5",
+    "text": "TIER_5"
+  }
+]
