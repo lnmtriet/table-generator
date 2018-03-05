@@ -1,7 +1,7 @@
 [
 	{
-		"displayText": "@condition_table",
-		"snippet": "ConditionTable '${1:table name}' {\n\tcondition: ${2:table condition}\n\trows:\n\t\t${3:row conditions}\n\tcolumn:\n\t\tname: '${4:column name}'\n\t\trange: [${5:col1,col2,col3,...}]\n}",
+		"displayText": "@table",
+		"snippet": "Table '${1:table name}' {\n\tcondition: ${2:table condition}\n\trows:\n\t\t$3\n\tcolumns:\n\t\t$4\n}",
 		"description": "Table with condition rows"
 	},
 	{
