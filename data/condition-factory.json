@@ -1936,12 +1936,12 @@
     "text": "TIER_5"
   },
   {
-    "description": "MIN",
-    "text": "Min value"
+    "description": "Min value",
+    "text": "MIN"
   },
   {
-    "description": "MAX",
-    "text": "Max value"
+    "description": "Max value",
+    "text": "MAX"
   }
 
 ]
