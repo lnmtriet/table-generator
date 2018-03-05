@@ -3,12 +3,24 @@
 		"displayText": ".and",
 		"snippet": ".and($1)",
 		"rightLabel": "Method",
-		"description": "A.and(B) => A is true and B is true"
+		"description": "A.and(B) => A is true and B is true."
 	},
   {
 		"displayText": ".or",
 		"snippet": ".or($1)",
 		"rightLabel": "Method",
-		"description": "A.or(B) => A is true or B is true or both"
+		"description": "A.or(B) => A is true or B is true or both."
+	},
+	{
+		"displayText": ".note",
+		"snippet": ".note('$1')",
+		"rightLabel": "Method",
+		"description": "Set note for this row. This will be shown in quote."
+	},
+	{
+		"displayText": ".crawl",
+		"snippet": ".crawl('$1')",
+		"rightLabel": "Method",
+		"description": "Exactly condition of this row in ratesheet."
 	}
 ]

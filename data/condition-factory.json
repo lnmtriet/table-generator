@@ -1934,5 +1934,14 @@
   {
     "description": "Tier 5",
     "text": "TIER_5"
+  },
+  {
+    "description": "MIN",
+    "text": "Min value"
+  },
+  {
+    "description": "MAX",
+    "text": "Max value"
   }
+
 ]

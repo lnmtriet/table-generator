@@ -9,61 +9,61 @@
 		"displayText": "@fico(",
 		"snippet": "@fico(${1:number of columns/rows}]",
 		"rightLabel": "Multiple Ranges Condition",
-		"description": "Multiple ranges of FICO (right aligned)"
+		"description": "Define consecutive ranges of FICO (right aligned)"
 	},
 	{
 		"displayText": "@fico[",
 		"snippet": "@fico[${1:number of columns/rows})",
 		"rightLabel": "Multiple Ranges Condition",
-		"description": "Multiple ranges of FICO (left aligned)"
+		"description": "Define consecutive ranges of FICO (left aligned)"
 	},
 	{
 		"displayText": "@ltv(",
 		"snippet": "@ltv(${1:number of columns/rows}]",
 		"rightLabel": "Multiple Ranges Condition",
-		"description": "Multiple ranges of LTV (right aligned)"
+		"description": "Define consecutive ranges of LTV (right aligned)"
 	},
 	{
 		"displayText": "@ltv[",
 		"snippet": "@ltv[${1:number of columns/rows})",
 		"rightLabel": "Multiple Ranges Condition",
-		"description": "Multiple ranges of LTV (left aligned)"
+		"description": "Define consecutive ranges of LTV (left aligned)"
 	},
 	{
 		"displayText": "@cltv(",
 		"snippet": "@cltv(${1:number of columns/rows}]",
 		"rightLabel": "Multiple Ranges Condition",
-		"description": "Multiple ranges of CLTV (right aligned)"
+		"description": "Define consecutive ranges of CLTV (right aligned)"
 	},
 	{
 		"displayText": "@cltv[",
 		"snippet": "@cltv[${1:number of columns/rows})",
 		"rightLabel": "Multiple Ranges Condition",
-		"description": "Multiple ranges of CLTV (left aligned)"
+		"description": "Define consecutive ranges of CLTV (left aligned)"
 	},
 	{
 		"displayText": "@term(",
 		"snippet": "@term(${1:number of columns/rows}]",
 		"rightLabel": "Multiple Ranges Condition",
-		"description": "Multiple ranges of Loan Term (right aligned)"
+		"description": "Define consecutive ranges of Loan Term (right aligned)"
 	},
 	{
 		"displayText": "@term[",
 		"snippet": "@term[${1:number of columns/rows})",
 		"rightLabel": "Multiple Ranges Condition",
-		"description": "Multiple ranges of Loan Term (left aligned)"
+		"description": "Define consecutive ranges of Loan Term (left aligned)"
 	},
 	{
 		"displayText": "@la(",
 		"snippet": "@la(${1:number of columns/rows}]",
 		"rightLabel": "Multiple Ranges Condition",
-		"description": "Multiple ranges of Loan Amount (right aligned)"
+		"description": "Define consecutive ranges of Loan Amount (right aligned)"
 	},
 	{
 		"displayText": "@la[",
 		"snippet": "@la[${1:number of columns/rows})",
 		"rightLabel": "Multiple Ranges Condition",
-		"description": "Multiple ranges of Loan Amount (left aligned)"
+		"description": "Define consecutive ranges of Loan Amount (left aligned)"
 	},
 	{
 		"displayText": "@fico(start,end)",
