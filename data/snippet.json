@@ -64,5 +64,29 @@
 		"snippet": "@la[${1:number of columns/rows})",
 		"rightLabel": "Multiple Ranges Condition",
 		"description": "Multiple ranges of Loan Amount (left aligned)"
+	},
+	{
+		"displayText": "@fico(start,end)",
+		"snippet": "fico(${1:start},${2:end})",
+		"rightLabel": "Range Condition",
+		"description": "start <= FICO <= end"
+	},
+	{
+		"displayText": "@ltv(start,end)",
+		"snippet": "ltv(${1:start},${2:end})",
+		"rightLabel": "Range Condition",
+		"description": "start <= LTV <= end"
+	},
+	{
+		"displayText": "@cltv(start,end)",
+		"snippet": "cltv(${1:start},${2:end})",
+		"rightLabel": "Range Condition",
+		"description": "start <= CLTV <= end"
+	},
+	{
+		"displayText": "@loanAmount(start,end)",
+		"snippet": "loanAmount(${1:start},${2:end})",
+		"rightLabel": "Range Condition",
+		"description": "start <= Loan Amount <= end"
 	}
 ]
