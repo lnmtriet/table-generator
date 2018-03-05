@@ -1,13 +1,28 @@
 [
 	{
 		"displayText": "@table",
-		"snippet": "Table '${1:table name}' {\n\tcondition: ${2:[when this table is applied]}\n\trows:\n\t\t${3:[rows definition]}\n\tcolumns:\n\t\t${4:[columns definition}\n}",
+		"snippet": "Table '${1:table name}' {\n\tcondition: ${2:[when this table is applied]}\n\trows:\n\t\t${3:[rows definition]}\n\tcolumns:\n\t\t${4:[columns definition]}\n}",
 		"description": "Table Info."
 	},
 	{
-		"displayText": "@snippet2",
-		"snippet": "Replace ${1:this text} then hit tab to replace ${2:this other text}.",
-		"description": "Another snippet."
+		"displayText": "@fico(",
+		"snippet": "@fico($1]",
+		"description": "A range of FICO (right aligned)"
+	},
+	{
+		"displayText": "@fico[",
+		"snippet": "@fico[$1)",
+		"description": "A range of FICO (left aligned)"
+	},
+	{
+		"displayText": "@ltv(",
+		"snippet": "@ltv($1]",
+		"description": "A range of LTV (right aligned)"
+	},
+	{
+		"displayText": "@ltv[",
+		"snippet": "@ltv[$1)",
+		"description": "A range of LTV (left aligned)"
 	},
 	{
 		"displayText": "@snippet3",
