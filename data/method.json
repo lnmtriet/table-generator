@@ -1,0 +1,14 @@
+[
+	{
+		"displayText": ".and",
+		"snippet": ".and($1)",
+		"rightLabel": "Method",
+		"description": "A.and(B) => A is true and B is true"
+	},
+  {
+		"displayText": ".or",
+		"snippet": ".or($1)",
+		"rightLabel": "Method",
+		"description": "A.or(B) => A is true or B is true or both"
+	}
+]
