@@ -8,83 +8,83 @@
 	{
 		"displayText": "@fico(",
 		"snippet": "@fico(${1:number of columns/rows}]",
-		"rightLabel": "Range Condition",
-		"description": "A range of FICO (right aligned)"
+		"rightLabel": "Multiple Ranges Condition",
+		"description": "Multiple ranges of FICO (right aligned)"
 	},
 	{
 		"displayText": "@fico[",
 		"snippet": "@fico[${1:number of columns/rows})",
-		"rightLabel": "Range Condition",
-		"description": "A range of FICO (left aligned)"
+		"rightLabel": "Multiple Ranges Condition",
+		"description": "Multiple ranges of FICO (left aligned)"
 	},
 	{
 		"displayText": "@ltv(",
 		"snippet": "@ltv(${1:number of columns/rows}]",
-		"rightLabel": "Range Condition",
-		"description": "A range of LTV (right aligned)"
+		"rightLabel": "Multiple Ranges Condition",
+		"description": "Multiple ranges of LTV (right aligned)"
 	},
 	{
 		"displayText": "@ltv[",
 		"snippet": "@ltv[${1:number of columns/rows})",
-		"rightLabel": "Range Condition",
-		"description": "A range of LTV (left aligned)"
+		"rightLabel": "Multiple Ranges Condition",
+		"description": "Multiple ranges of LTV (left aligned)"
 	},
 	{
 		"displayText": "@cltv(",
 		"snippet": "@cltv(${1:number of columns/rows}]",
-		"rightLabel": "Range Condition",
-		"description": "A range of CLTV (right aligned)"
+		"rightLabel": "Multiple Ranges Condition",
+		"description": "Multiple ranges of CLTV (right aligned)"
 	},
 	{
 		"displayText": "@cltv[",
 		"snippet": "@cltv[${1:number of columns/rows})",
-		"rightLabel": "Range Condition",
-		"description": "A range of CLTV (left aligned)"
+		"rightLabel": "Multiple Ranges Condition",
+		"description": "Multiple ranges of CLTV (left aligned)"
 	},
 	{
 		"displayText": "@term(",
 		"snippet": "@term(${1:number of columns/rows}]",
-		"rightLabel": "Range Condition",
-		"description": "A range of Loan Term (right aligned)"
+		"rightLabel": "Multiple Ranges Condition",
+		"description": "Multiple ranges of Loan Term (right aligned)"
 	},
 	{
 		"displayText": "@term[",
 		"snippet": "@term[${1:number of columns/rows})",
-		"rightLabel": "Range Condition",
-		"description": "A range of Loan Term (left aligned)"
+		"rightLabel": "Multiple Ranges Condition",
+		"description": "Multiple ranges of Loan Term (left aligned)"
 	},
 	{
 		"displayText": "@la(",
 		"snippet": "@la(${1:number of columns/rows}]",
-		"rightLabel": "Range Condition",
-		"description": "A range of Loan Amount (right aligned)"
+		"rightLabel": "Multiple Ranges Condition",
+		"description": "Multiple ranges of Loan Amount (right aligned)"
 	},
 	{
 		"displayText": "@la[",
 		"snippet": "@la[${1:number of columns/rows})",
-		"rightLabel": "Range Condition",
-		"description": "A range of Loan Amount (left aligned)"
+		"rightLabel": "Multiple Ranges Condition",
+		"description": "Multiple ranges of Loan Amount (left aligned)"
 	},
 	{
-		"displayText": "fico($1,$2)",
+		"displayText": "@fico($1,$2)",
 		"snippet": "fico(${1:start},${2:end})",
 		"rightLabel": "Range Condition",
 		"description": "start <= FICO <= end"
 	},
 	{
-		"displayText": "ltv($1,$2)",
+		"displayText": "@ltv($1,$2)",
 		"snippet": "ltv(${1:start},${2:end})",
 		"rightLabel": "Range Condition",
 		"description": "start <= LTV <= end"
 	},
 	{
-		"displayText": "cltv($1,$2)",
+		"displayText": "@cltv($1,$2)",
 		"snippet": "cltv(${1:start},${2:end})",
 		"rightLabel": "Range Condition",
 		"description": "start <= CLTV <= end"
 	},
 	{
-		"displayText": "loanAmount($1,$2)",
+		"displayText": "@loanAmount($1,$2)",
 		"snippet": "loanAmount(${1:start},${2:end})",
 		"rightLabel": "Range Condition",
 		"description": "start <= Loan Amount <= end"
