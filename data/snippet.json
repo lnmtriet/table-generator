@@ -1,8 +1,8 @@
 [
 	{
 		"displayText": "@table",
-		"snippet": "Table '${1:table name}' {\n\tcondition: ${2:table condition}\n\trows:\n\t\t$3\n\tcolumns:\n\t\t$4\n}",
-		"description": "Table with condition rows"
+		"snippet": "Table '${1:table name}' {\n\tcondition: ${2:[when this table is applied]}\n\trows:\n\t\t${3:[rows definition]}\n\tcolumns:\n\t\t${4:[columns definition}\n}",
+		"description": "Table Info."
 	},
 	{
 		"displayText": "@snippet2",
