@@ -7,61 +7,61 @@
 	},
 	{
 		"displayText": "@fico(",
-		"snippet": "@fico($1]",
+		"snippet": "@fico(${1:[number of columns/rows]}]",
 		"rightLabel": "Range Condition",
 		"description": "A range of FICO (right aligned)"
 	},
 	{
 		"displayText": "@fico[",
-		"snippet": "@fico[$1)",
+		"snippet": "@fico[${1:[number of columns/rows]})",
 		"rightLabel": "Range Condition",
 		"description": "A range of FICO (left aligned)"
 	},
 	{
 		"displayText": "@ltv(",
-		"snippet": "@ltv($1]",
+		"snippet": "@ltv(${1:[number of columns/rows]}]",
 		"rightLabel": "Range Condition",
 		"description": "A range of LTV (right aligned)"
 	},
 	{
 		"displayText": "@ltv[",
-		"snippet": "@ltv[$1)",
+		"snippet": "@ltv[${1:[number of columns/rows]})",
 		"rightLabel": "Range Condition",
 		"description": "A range of LTV (left aligned)"
 	},
 	{
 		"displayText": "@cltv(",
-		"snippet": "@cltv($1]",
+		"snippet": "@cltv(${1:[number of columns/rows]}]",
 		"rightLabel": "Range Condition",
 		"description": "A range of CLTV (right aligned)"
 	},
 	{
 		"displayText": "@cltv[",
-		"snippet": "@cltv[$1)",
+		"snippet": "@cltv[${1:[number of columns/rows]})",
 		"rightLabel": "Range Condition",
 		"description": "A range of CLTV (left aligned)"
 	},
 	{
 		"displayText": "@term(",
-		"snippet": "@term($1]",
+		"snippet": "@term(${1:[number of columns/rows]}]",
 		"rightLabel": "Range Condition",
 		"description": "A range of Loan Term (right aligned)"
 	},
 	{
 		"displayText": "@term[",
-		"snippet": "@term[$1)",
+		"snippet": "@term[${1:[number of columns/rows]})",
 		"rightLabel": "Range Condition",
 		"description": "A range of Loan Term (left aligned)"
 	},
 	{
 		"displayText": "@la(",
-		"snippet": "@la($1]",
+		"snippet": "@la(${1:[number of columns/rows]}]",
 		"rightLabel": "Range Condition",
 		"description": "A range of Loan Amount (right aligned)"
 	},
 	{
 		"displayText": "@la[",
-		"snippet": "@la[$1)",
+		"snippet": "@la[${1:[number of columns/rows]})",
 		"rightLabel": "Range Condition",
 		"description": "A range of Loan Amount (left aligned)"
 	}
