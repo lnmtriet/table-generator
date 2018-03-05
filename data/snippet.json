@@ -2,41 +2,67 @@
 	{
 		"displayText": "@table",
 		"snippet": "Table '${1:table name}' {\n\tcondition: ${2:[when this table is applied]}\n\trows:\n\t\t${3:[rows definition]}\n\tcolumns:\n\t\t${4:[columns definition]}\n}",
-		"description": "Table Info."
+		"rightLabel": "Table Info",
+		"description": "Define table metadata"
 	},
 	{
 		"displayText": "@fico(",
 		"snippet": "@fico($1]",
+		"rightLabel": "Range Condition",
 		"description": "A range of FICO (right aligned)"
 	},
 	{
 		"displayText": "@fico[",
 		"snippet": "@fico[$1)",
+		"rightLabel": "Range Condition",
 		"description": "A range of FICO (left aligned)"
 	},
 	{
 		"displayText": "@ltv(",
 		"snippet": "@ltv($1]",
+		"rightLabel": "Range Condition",
 		"description": "A range of LTV (right aligned)"
 	},
 	{
 		"displayText": "@ltv[",
 		"snippet": "@ltv[$1)",
+		"rightLabel": "Range Condition",
 		"description": "A range of LTV (left aligned)"
 	},
 	{
-		"displayText": "@snippet3",
-		"snippet": "Start typing to replace ${1:multiple} ${1:text} ${1:simultaneously}. Then hit tab to ${2:do} ${2:it} ${2:again}.",
-		"description": "Yet another snippet."
+		"displayText": "@cltv(",
+		"snippet": "@cltv($1]",
+		"rightLabel": "Range Condition",
+		"description": "A range of CLTV (right aligned)"
 	},
 	{
-		"displayText": "@snippet4",
-		"snippet": "You don't need filler text for your prompts. Start typing: $1 (notice where the cursor is).",
-		"description": "Final snippet."
+		"displayText": "@cltv[",
+		"snippet": "@cltv[$1)",
+		"rightLabel": "Range Condition",
+		"description": "A range of CLTV (left aligned)"
 	},
-  {
-		"displayText": "@snippet5",
-		"snippet": "You don't need filler text for your prompts. Start typing: $1 (notice where the cursor is).",
-		"description": "Final snippet."
+	{
+		"displayText": "@term(",
+		"snippet": "@term($1]",
+		"rightLabel": "Range Condition",
+		"description": "A range of Loan Term (right aligned)"
+	},
+	{
+		"displayText": "@term[",
+		"snippet": "@term[$1)",
+		"rightLabel": "Range Condition",
+		"description": "A range of Loan Term (left aligned)"
+	},
+	{
+		"displayText": "@la(",
+		"snippet": "@la($1]",
+		"rightLabel": "Range Condition",
+		"description": "A range of Loan Amount (right aligned)"
+	},
+	{
+		"displayText": "@la[",
+		"snippet": "@la[$1)",
+		"rightLabel": "Range Condition",
+		"description": "A range of Loan Amount (left aligned)"
 	}
 ]
