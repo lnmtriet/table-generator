@@ -1,0 +1,2271 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- ===============================================================         -->
+<!--      File Name        : LOANPROSPECTOR_RESPONSE_4.3.DTD                 -->
+<!--      Creation date    : June 1st, 2017                                   -->
+
+
+<!ELEMENT SERVICE_ORDER_RESPONSE ( KEY*,
+        STATUS?,
+        LOAN_FEEDBACK?,
+        CALCULATIONS*,
+        LOAN_APPLICATION?,
+        POLLING_STATUS? )>
+
+<!ATTLIST SERVICE_ORDER_RESPONSE
+    _Date CDATA  #IMPLIED>
+
+<!ELEMENT ERROR EMPTY>
+<!ATTLIST ERROR
+    _Code       CDATA  #IMPLIED
+    _Type       CDATA  #IMPLIED
+    _Message    CDATA  #IMPLIED>
+
+<!ELEMENT KEY EMPTY>
+<!ATTLIST KEY
+    _Name  CDATA  #IMPLIED
+    _Value  CDATA  #IMPLIED>
+
+<!ELEMENT STATUS (ERROR_INFORMATION*) >
+<!ATTLIST STATUS _Processing  (Partial | Completed | Error | PartialAndError |
+                               CompleteAndError | Other)  #IMPLIED
+                 _ProcessingOtherDescription        CDATA #IMPLIED>
+
+<!ELEMENT ERROR_INFORMATION  EMPTY >
+<!ATTLIST ERROR_INFORMATION
+    ErrorCategory  (Processing|Data)   #IMPLIED
+    ErrorCode CDATA #IMPLIED
+    ErrorDescription CDATA  #IMPLIED>
+
+<!ELEMENT LOAN_FEEDBACK (LOAN_PROCESSING_MESSAGE*,
+        CREDIT_INFILE_REPORT?,
+        MERGED_CREDIT_REPORT?,
+        ASSET_VERIFICATION_REPORT*,
+        ASSET_VERIFICATION_DATA*,
+        FRE_BORROWER_RESPONSE*)>
+
+<!ATTLIST LOAN_FEEDBACK
+    FREProductEvaluationDescription CDATA #IMPLIED
+    LoanProspectorKeyIdentifier  CDATA #IMPLIED
+    LoanProspectorLoanIdentifier CDATA #IMPLIED
+    FRELoanProspectorTransactionIdentifier CDATA #IMPLIED
+    LoanProspectorTransactionIdentifier CDATA #IMPLIED
+    LenderCaseIdentifier CDATA #IMPLIED
+    LoanProspectorSubmissionNumber CDATA #IMPLIED
+    LoanProspectorServiceEvaluationDescription CDATA #IMPLIED
+    LoanProspectorEvaluationStatusDescription CDATA  #IMPLIED
+    LoanProspectorSubmissionDate  CDATA #IMPLIED
+    LoanProspectorEvaluationDate CDATA #IMPLIED
+    FREPurchaseEligibilityDescription CDATA #IMPLIED
+    LoanProspectorInitialLTVRatio CDATA #IMPLIED
+    LoanProspectorInitialTotalLTVRatio CDATA #IMPLIED
+    LoanProspectorCreditRiskClassificationDescription CDATA #IMPLIED
+    LoanProspectorDocumentationClassificationDescription CDATA #IMPLIED
+    LoanProspectorAcceptPlusEligibleIndicator (Y | N) #IMPLIED
+    CreditScoreDataRepositorySourceType (Equifax | Experian | TransUnion |
+                                         MergedData | Other )  #IMPLIED
+    CreditScoreDataRepositorySourceTypeOtherDescription  CDATA #IMPLIED
+    ScoredBorrowerName  CDATA #IMPLIED
+    FRESelectedCreditScoreValue CDATA  #IMPLIED
+    HousingRatioPercent  CDATA  #IMPLIED
+    DebtRatioPercent  CDATA  #IMPLIED
+    FinancingConcessionAmount CDATA #IMPLIED
+    FRECashOutIndicator CDATA #IMPLIED
+    OriginatingCompanyName CDATA #IMPLIED
+    SubmittingCompanyName  CDATA #IMPLIED
+    FRELoanPurposeDescription CDATA #IMPLIED
+    FREPropertyCategoryDescription CDATA #IMPLIED
+    MortgageLoanLimit CDATA #IMPLIED
+    FREHigherTotalLTV CDATA #IMPLIED
+    FREOccupantHousingRatio CDATA #IMPLIED
+    FREOccupantDebtRatio CDATA #IMPLIED
+    FRECreditExpirationDate CDATA #IMPLIED
+    FRECreditScoreLTVFeeLevelDescription CDATA #IMPLIED
+    FRELoanAssignmentStatusDescription CDATA #IMPLIED
+    FREDocumentationLevelDescription   CDATA #IMPLIED
+    FRE_HUDScoredIndicator (Y|N) #IMPLIED
+    AssignFromUnparsedName CDATA #IMPLIED
+    AssignToUnparsedName CDATA #IMPLIED
+    FRELoanReleaseFromUnparsedName CDATA #IMPLIED
+    FRELoanReleaseToUnparsedName CDATA #IMPLIED
+    FRELoanMSPAssignmentUnparsedName CDATA #IMPLIED
+    GloballyUniqueIdentifier CDATA #IMPLIED
+    CollateralRepresentationAndWarrantyReliefEligibilityType   
+                                              (Eligible |
+                                               NotEligible |
+                                               Unavailable )  #IMPLIED
+    AssetRepresentationAndWarrantyReliefEligibilityType   
+                                              (Eligible |
+                                               NotEligible |
+                                               Unavailable )  #IMPLIED
+	>
+
+<!ELEMENT LOAN_PROCESSING_MESSAGE  (FEEDBACK_MESSAGE*)>
+<!ATTLIST LOAN_PROCESSING_MESSAGE
+        _Type  (DocumentationMessages | CreditMessages |
+                LoanProcessingMessages | TransactionProcessingMessages |
+                AlertInformation |Other)     #IMPLIED
+        _TypeOtherDescription         CDATA  #IMPLIED>
+
+<!ELEMENT FEEDBACK_MESSAGE EMPTY>
+<!ATTLIST FEEDBACK_MESSAGE
+    MessageTag  CDATA  #IMPLIED
+    MessageCode     CDATA  #IMPLIED
+    MessageText     CDATA  #IMPLIED
+    MessageSection CDATA #IMPLIED>
+
+<!ELEMENT CREDIT_INFILE_REPORT (#PCDATA)>
+
+<!ELEMENT MERGED_CREDIT_REPORT (#PCDATA)>
+
+<!ELEMENT ASSET_VERIFICATION_REPORT (#PCDATA)>
+
+<!ELEMENT ASSET_VERIFICATION_DATA (VERIFICATION_MESSAGES?, VERIFIED_ASSETS?)>
+
+<!ELEMENT VERIFICATION_MESSAGES (VRF_MSG_GROUP*)> 
+
+<!ELEMENT VRF_MSG_GROUP (VRF_MESSAGE*)>
+
+<!ATTLIST VRF_MSG_GROUP
+        _Type  (DocumentationMessages | CreditMessages |
+                LoanProcessingMessages | TransactionProcessingMessages |
+                AlertInformation |Other)     #IMPLIED
+        _TypeOtherDescription         CDATA  #IMPLIED>
+
+
+<!ELEMENT VRF_MESSAGE (MSG_CONTEXT_DATA?)> 
+<!ATTLIST VRF_MESSAGE
+    MessageTag  CDATA  #IMPLIED
+    MessageCode     CDATA  #IMPLIED
+    MessageText     CDATA  #IMPLIED
+    MessageSection CDATA #IMPLIED>
+
+<!ELEMENT MSG_CONTEXT_DATA (MSG_CTX_HEADER, CTX_ROW*)>
+
+<!ELEMENT MSG_CTX_HEADER (CTX_COL_DEF*)>
+
+<!ELEMENT CTX_COL_DEF EMPTY>
+<!ATTLIST CTX_COL_DEF
+    ColNum       CDATA  #IMPLIED
+    ColName      CDATA  #IMPLIED
+    DataType     CDATA  #IMPLIED
+    MaxLength    CDATA #IMPLIED>
+
+<!ELEMENT CTX_ROW (CTX_COL_ITEM*)>
+<!ATTLIST CTX_ROW
+    RowNum  CDATA  #IMPLIED>
+
+<!ELEMENT CTX_COL_ITEM EMPTY>
+<!ATTLIST CTX_COL_ITEM
+    ColNum       CDATA  #IMPLIED
+    Value    CDATA #IMPLIED>
+    
+<!ELEMENT VERIFIED_ASSETS (VERIFICATION_ASSET*)>
+ 
+<!ELEMENT VERIFICATION_ASSET EMPTY>
+<!ATTLIST VERIFICATION_ASSET
+    AccountHolder  CDATA  #IMPLIED
+    VerOrderBorrName   CDATA  #IMPLIED
+    FinInstitution  CDATA  #IMPLIED
+    AcctType        CDATA  #IMPLIED
+    AcctNumber      CDATA  #IMPLIED
+    Balance         CDATA  #IMPLIED
+    StatementDate   CDATA  #IMPLIED
+    ExpirationDate  CDATA  #IMPLIED
+    ReportIdentifier  CDATA  #IMPLIED
+    DuplFlag         CDATA  #IMPLIED>
+
+
+
+<!ELEMENT FRE_BORROWER_RESPONSE (FRE_CREDIT_SCORE*)>
+<!ATTLIST FRE_BORROWER_RESPONSE
+    BorrowerUnparsedName           CDATA            #IMPLIED
+    _SelectedRepositorySourceType (CCC| TRW | CBI | Other) #IMPLIED
+    SelectedRepositorySourceTypeOtherDescription    CDATA  #IMPLIED
+    _CreditRepulledIndicator      (Y | N)           #IMPLIED
+    BorrowerSSN                CDATA                #IMPLIED
+    CreditReportIdentifier         CDATA            #IMPLIED
+    CreditReaccessIndicator       (Y | N )          #IMPLIED >
+
+<!ELEMENT FRE_CREDIT_SCORE EMPTY>
+<!ATTLIST FRE_CREDIT_SCORE
+    _RepositorySourceType (CCC| TRW |  CBI | Other)  #IMPLIED
+    _RepositorySourceTypeOtherDescription     CDATA  #IMPLIED
+    _RepositoryScoreValue CDATA  #IMPLIED>
+
+<!ELEMENT CALCULATIONS  (ERROR*)>
+<!ATTLIST CALCULATIONS
+    _Name   CDATA #IMPLIED
+    _Value  CDATA #IMPLIED
+    BorrowerID IDREFS #IMPLIED>
+
+<!ELEMENT LOAN_APPLICATION (_DATA_INFORMATION? ,
+                            ADDITIONAL_CASE_DATA? ,
+                            AFFORDABLE_LENDING?
+                            , ASSET* ,
+                            DOWN_PAYMENT* ,
+                            GOVERNMENT_LOAN? ,
+                            GOVERNMENT_REPORTING? ,
+                            INTERVIEWER_INFORMATION? ,
+                            LIABILITY* ,
+                            LOAN_PRODUCT_DATA? ,
+                            LOAN_PURPOSE? ,
+                            LOAN_QUALIFICATION? ,
+                            MORTGAGE_TERMS? ,
+                            PROPERTY? ,
+                            PROPOSED_HOUSING_EXPENSE* ,
+                            REO_PROPERTY* ,
+                            TITLE_HOLDER* ,
+                            TRANSACTION_DETAIL? ,
+                            BORROWER* ,
+                            LOAN_ORIGINATION_SYSTEM? ,
+                            CLOSING_AGENT? ,
+                            INVESTOR_FEATURE*,
+                            EXTENSION_LOAN_APPLICATION)>
+
+
+<!ATTLIST LOAN_APPLICATION MISMOVersionID CDATA  #FIXED "2.4">
+
+<!ELEMENT _DATA_INFORMATION (ERROR*, DATA_VERSION+)>
+<!ATTLIST _DATA_INFORMATION _ID ID  #IMPLIED>
+
+<!ELEMENT DATA_VERSION (ERROR*)>
+
+<!ATTLIST DATA_VERSION _ID     ID     #IMPLIED>
+
+<!ATTLIST DATA_VERSION _Name   CDATA  #IMPLIED>
+
+<!ATTLIST DATA_VERSION _Number CDATA  #REQUIRED>
+
+<!ELEMENT GOVERNMENT_REPORTING (ERROR*)>
+
+<!ATTLIST GOVERNMENT_REPORTING
+          _ID                             ID        #IMPLIED
+          HMDA_HOEPALoanStatusIndicator  (Y | N )   #IMPLIED
+          HMDAPreapprovalType            (NotApplicable |
+                                          PreapprovalWasNotRequested |
+                                          PreapprovalWasRequested )  #IMPLIED
+          HMDAPurposeOfLoanType          (HomeImprovement |
+                                          HomePurchase |
+                                          Refinancing )  #IMPLIED
+          HMDARateSpreadPercent                   CDATA  #IMPLIED >
+
+<!ELEMENT ADDITIONAL_CASE_DATA (ERROR*, MORTGAGE_SCORE* , TRANSMITTAL_DATA?)>
+<!ATTLIST ADDITIONAL_CASE_DATA _ID ID  #IMPLIED>
+
+<!ELEMENT MORTGAGE_SCORE (ERROR*)>
+
+<!ATTLIST MORTGAGE_SCORE _ID              ID     #IMPLIED>
+
+<!ATTLIST MORTGAGE_SCORE _Date            CDATA  #IMPLIED>
+
+<!ATTLIST MORTGAGE_SCORE _Type    (FraudFilterScore |
+                                   GE_IQScore |
+                                   Other |
+                                   PMIAuraAQIScore |
+                                   UGIAccuscore )  #IMPLIED>
+
+<!ATTLIST MORTGAGE_SCORE _TypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST MORTGAGE_SCORE _Value                CDATA  #IMPLIED>
+
+<!ELEMENT TRANSMITTAL_DATA (ERROR*)>
+
+<!ATTLIST TRANSMITTAL_DATA _ID                 ID     #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA ArmsLengthIndicator        (Y | N )  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA BelowMarketSubordinateFinancingIndicator (Y | N )  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA BuydownRatePercent   CDATA  #IMPLIED>
+
+<!--#DOCUMENTATION:Description of the point in the mortgage process at -->
+<!-- which the loan is being submitted for automated underwriting.     -->
+<!-- Enumerated                                                        -->
+<!ATTLIST TRANSMITTAL_DATA CaseStateType        (Application |
+                                                 FinalDisposition |
+                                                 Other |
+                                                 PostClosingQualityControl |
+                                                 Prequalification |
+                                                 Underwriting)  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA CaseStateTypeOtherDescription     CDATA  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA CommitmentReferenceIdentifier     CDATA  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA ConcurrentOriginationIndicator   (Y | N )  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA ConcurrentOriginationLenderIndicator  (Y | N )  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA CreditReportAuthorizationIndicator    (Y | N )  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA CurrentFirstMortgageHolderType  (FNM |
+                                                            FRE |
+                                                            Other |
+                                                            Unknown )  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA CurrentFirstMortgageHolderTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA InvestorInstitutionIdentifier            CDATA  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA InvestorLoanIdentifier                   CDATA  #IMPLIED>
+
+<!--#DOCUMENTATION:The user's branch identification code for the loan. String-->
+<!ATTLIST TRANSMITTAL_DATA LenderBranchIdentifier                   CDATA  #IMPLIED>
+
+<!--#DOCUMENTATION:A tracking number assigned by the wholesale lender to -->
+<!-- identify the loan for pipeline management. String                   -->
+<!ATTLIST TRANSMITTAL_DATA LenderRegistrationIdentifier             CDATA  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA LoanOriginatorType           (Broker |
+                                                         Correspondent |
+                                                         Lender |
+                                                         Other )  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA LoanOriginatorTypeOtherDescription       CDATA  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA PropertyAppraisedValueAmount             CDATA  #IMPLIED>
+
+<!--#DOCUMENTATION:Borrower's or Originator's estimate of property's present market value in dollars. Money -->
+<!ATTLIST TRANSMITTAL_DATA PropertyEstimatedValueAmount             CDATA  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA PropertiesFinancedByLenderCount          CDATA  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA RateLockPeriodDays                       CDATA  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA RateLockRequestedExtensionDays           CDATA  #IMPLIED>
+
+<!ATTLIST TRANSMITTAL_DATA RateLockType        (BestEfforts | Mandatory )  #IMPLIED>
+
+<!ELEMENT AFFORDABLE_LENDING (ERROR*)>
+
+<!ATTLIST AFFORDABLE_LENDING _ID                                ID     #IMPLIED>
+
+<!ATTLIST AFFORDABLE_LENDING FNMCommunityLendingProductName     CDATA  #IMPLIED>
+
+<!ATTLIST AFFORDABLE_LENDING FNMCommunityLendingProductType (Fannie32 |
+                                                             Fannie97 |
+                                                             CommunityHomeBuyerProgram |
+                                                             MyCommunityMortgage |
+                                                             Other | CommunityHomeBuyersProgram)  #IMPLIED>
+
+<!ATTLIST AFFORDABLE_LENDING FNMCommunityLendingProductTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST AFFORDABLE_LENDING FNMCommunitySecondsIndicator         (Y | N )  #IMPLIED>
+
+<!ATTLIST AFFORDABLE_LENDING FNMNeighborsMortgageEligibilityIndicator (Y | N )  #IMPLIED>
+
+<!-- mortgage product being financed. String                               -->
+<!ATTLIST AFFORDABLE_LENDING FREAffordableProgramIdentifier          CDATA  #IMPLIED>
+
+<!ATTLIST AFFORDABLE_LENDING HUDIncomeLimitAdjustmentFactor          CDATA  #IMPLIED>
+
+<!ATTLIST AFFORDABLE_LENDING HUDLendingIncomeLimitAmount             CDATA  #IMPLIED>
+
+<!ATTLIST AFFORDABLE_LENDING HUDMedianIncomeAmount                   CDATA  #IMPLIED>
+
+<!ATTLIST AFFORDABLE_LENDING MSAIdentifier                           CDATA  #IMPLIED>
+
+<!ELEMENT ASSET (ERROR*)>
+
+<!ATTLIST ASSET _ID                           ID      #IMPLIED>
+
+<!ATTLIST ASSET BorrowerID                    IDREFS  #IMPLIED>
+
+<!ATTLIST ASSET _AccountIdentifier            CDATA   #IMPLIED>
+
+<!ATTLIST ASSET _CashOrMarketValueAmount      CDATA   #IMPLIED>
+
+<!ATTLIST ASSET _HolderCity                   CDATA   #IMPLIED>
+
+<!ATTLIST ASSET _HolderName                   CDATA   #IMPLIED>
+
+<!ATTLIST ASSET _HolderPostalCode             CDATA   #IMPLIED>
+
+<!ATTLIST ASSET _HolderState                  CDATA   #IMPLIED>
+
+<!ATTLIST ASSET _HolderStreetAddress          CDATA   #IMPLIED>
+
+<!ATTLIST ASSET _Type                     (Automobile |
+                                           Bond |
+                                           BridgeLoanNotDeposited |
+                                           CashOnHand |
+                                           CertificateOfDepositTimeDeposit |
+                                           CheckingAccount |
+                                           EarnestMoneyCashDepositTowardPurchase |
+                                           GiftsNotDeposited |
+                                           GiftsTotal |
+                                           GrantsNotDeposited |
+                                           LifeInsurance |
+                                           MoneyMarketFund |
+                                           MutualFund |
+                                           NetWorthOfBusinessOwned |
+                                           OtherLiquidAssets |
+                                           OtherNonLiquidAssets |
+                                           PendingNetSaleProceedsFromRealEstateAssets |
+                                           RealEstateOwned |
+                                           RelocationMoney |
+                                           RetirementFund |
+                                           SaleOtherAssets |
+                                           SavingsAccount |
+                                           SecuredBorrowedFundsNotDeposited |
+                                           Stock |
+                                           TrustAccount ) #IMPLIED >
+
+<!ATTLIST ASSET _VerifiedIndicator          (Y | N )  #IMPLIED>
+
+<!ATTLIST ASSET AutomobileMakeDescription     CDATA   #IMPLIED>
+
+<!ATTLIST ASSET AutomobileModelYear           CDATA   #IMPLIED>
+
+<!ATTLIST ASSET LifeInsuranceFaceValueAmount  CDATA   #IMPLIED>
+
+<!ATTLIST ASSET OtherAssetTypeDescription     CDATA   #IMPLIED>
+
+<!ATTLIST ASSET StockBondMutualFundShareCount CDATA   #IMPLIED>
+
+<!ELEMENT DOWN_PAYMENT (ERROR*)>
+
+<!ATTLIST DOWN_PAYMENT _ID                     ID     #IMPLIED>
+
+<!ATTLIST DOWN_PAYMENT _Amount                 CDATA  #IMPLIED>
+
+<!ATTLIST DOWN_PAYMENT _SourceDescription      CDATA  #IMPLIED>
+
+<!ATTLIST DOWN_PAYMENT _Type      (BridgeLoan |
+                                   CashOnHand |
+                                   CashOrOtherEquity |
+                                   CheckingSavings |
+                                   Contribution |
+                                   CreditCard |
+                                   DepositOnSalesContract |
+                                   EquityOnPendingSale |
+                                   EquityOnSoldProperty |
+                                   EquityOnSubjectProperty |
+                                   ForgivableSecuredLoan |
+                                   GiftFunds |
+                                   HousingRelocation |
+                                   LifeInsuranceCashValue |
+                                   LotEquity |
+                                   MortgageCreditCertificate |
+                                   OtherTypeOfDownPayment |
+                                   PledgedCollateral |
+                                   PremiumFunds |
+                                   RentWithOptionToPurchase |
+                                   RetirementFunds |
+                                   SaleOfChattel |
+                                   SalesPriceAdjustment |
+                                   SecondaryFinancing |
+                                   SecuredBorrowedFunds |
+                                   StocksAndBonds |
+                                   SweatEquity |
+                                   TradeEquity |
+                                   TrustFunds |
+                                   UnsecuredBorrowedFunds )  #IMPLIED>
+
+<!ATTLIST DOWN_PAYMENT _TypeOtherDescription CDATA  #IMPLIED>
+
+<!ELEMENT GOVERNMENT_LOAN (ERROR*, FHA_LOAN? , FHA_VA_LOAN? , VA_LOAN?)>
+
+<!ATTLIST GOVERNMENT_LOAN  _ID ID  #IMPLIED >
+<!ELEMENT FHA_LOAN (ERROR*)>
+
+<!ATTLIST FHA_LOAN _ID         ID     #IMPLIED>
+
+<!--#DOCUMENTATION:Dollar amount of discount points to be financed on a  -->
+<!-- FHA no cash out refinance Money                                     -->
+<!ATTLIST FHA_LOAN BorrowerFinancedFHADiscountPointsAmount CDATA  #IMPLIED>
+
+<!--#DOCUMENTATION:Indicates how the borrower or lender prefers that the -->
+<!-- judgement process treat alimony in an FHA transaction. Numeric      -->
+<!ATTLIST FHA_LOAN FHAAlimonyLiabilityTreatmentType   (AdditionToDebt |
+                                                       ReductionToIncome )  #IMPLIED>
+<!ATTLIST FHA_LOAN FHACoverageRenewalRatePercent           CDATA  #IMPLIED>
+
+<!ATTLIST FHA_LOAN _LenderIdentifier                       CDATA  #IMPLIED>
+
+<!ATTLIST FHA_LOAN _SponsorIdentifier                      CDATA  #IMPLIED>
+
+<!ATTLIST FHA_LOAN FHA_MIPremiumRefundAmount               CDATA  #IMPLIED>
+
+<!ATTLIST FHA_LOAN FHAUpfrontMIPremiumPercent              CDATA  #IMPLIED>
+
+<!ATTLIST FHA_LOAN SectionOfActType (184 |
+                     201S |
+                     201SD |
+                     201U |
+                     201UD |
+                     203B |
+                     203B2 |
+                     203B241 |
+                     203B251 |
+                     203H |
+                     203I |
+                     203K |
+                     203K241 |
+                     203K251 |
+                     213 |
+                     220 |
+                     221 |
+                     221D2 |
+                     221D2251 |
+                     222 |
+                     223E |
+                     233 |
+                     234C |
+                     234C251 |
+                     235 |
+                     237 |
+                     240 |
+                     245 |
+                     247 |
+                     248 |
+                     251 |
+                     255 |
+                     26101 |
+                     26102 |
+                     26201 |
+                     26202 |
+                     265 |
+                     27001 |
+                     27002 |
+                     27003 |
+                     27004 |
+                     27005 |
+                     27101 |
+                     27102 |
+                     27103 |
+                     27104 |
+                     27105 |
+                     3703 |
+                     3703D |
+                     3703D2 |
+                     3710 |
+                     3711 |
+                     502 |
+                     729 |
+                     Other )  #IMPLIED>
+
+<!ATTLIST FHA_LOAN SectionOfActTypeOtherDescription             CDATA  #IMPLIED>
+
+<!ELEMENT FHA_VA_LOAN (ERROR*)>
+
+<!ATTLIST FHA_VA_LOAN _ID                                       ID     #IMPLIED>
+
+<!ATTLIST FHA_VA_LOAN BorrowerPaidFHA_VAClosingCostsAmount      CDATA  #IMPLIED>
+
+<!ATTLIST FHA_VA_LOAN BorrowerPaidFHA_VAClosingCostsPercent     CDATA  #IMPLIED>
+
+<!ATTLIST FHA_VA_LOAN GovernmentMortgageCreditCertificateAmount CDATA  #IMPLIED>
+
+<!ATTLIST FHA_VA_LOAN GovernmentRefinanceType
+                                        (FullDocumentation |
+                     InterestRateReductionRefinanceLoan |
+                     Other |
+                     StreamlineWithAppraisal |
+                     StreamlineWithoutAppraisal )  #IMPLIED>
+
+<!ATTLIST FHA_VA_LOAN GovernmentRefinanceTypeOtherDescription   CDATA  #IMPLIED>
+
+<!ATTLIST FHA_VA_LOAN OtherPartyPaidFHA_VAClosingCostsAmount    CDATA  #IMPLIED>
+
+<!ATTLIST FHA_VA_LOAN OtherPartyPaidFHA_VAClosingCostsPercent   CDATA  #IMPLIED>
+
+<!ATTLIST FHA_VA_LOAN PropertyEnergyEfficientHomeIndicator   (Y | N )  #IMPLIED>
+
+<!ATTLIST FHA_VA_LOAN SellerPaidFHA_VAClosingCostsPercent       CDATA  #IMPLIED>
+
+<!ELEMENT VA_LOAN (ERROR*)>
+
+<!ATTLIST VA_LOAN _ID                                  ID     #IMPLIED>
+
+<!ATTLIST VA_LOAN BorrowerFundingFeePercent            CDATA  #IMPLIED>
+
+<!ATTLIST VA_LOAN VABorrowerCoBorrowerMarriedIndicator  (Y | N )  #IMPLIED>
+
+<!ATTLIST VA_LOAN VAEntitlementAmount                  CDATA  #IMPLIED>
+
+<!ATTLIST VA_LOAN VAMaintenanceExpenseMonthlyAmount    CDATA  #IMPLIED>
+
+<!ATTLIST VA_LOAN VAResidualIncomeAmount               CDATA  #IMPLIED>
+
+<!ATTLIST VA_LOAN VAUtilityExpenseMonthlyAmount        CDATA  #IMPLIED>
+
+<!ELEMENT INTERVIEWER_INFORMATION (ERROR*)>
+
+<!ATTLIST INTERVIEWER_INFORMATION _ID                  ID     #IMPLIED>
+
+<!ATTLIST INTERVIEWER_INFORMATION ApplicationTakenMethodType
+                                              (FaceToFace |
+                                               Internet |
+                                               Mail |
+                                               Telephone )    #IMPLIED>
+
+<!ATTLIST INTERVIEWER_INFORMATION InterviewerApplicationSignedDate  CDATA  #IMPLIED>
+
+<!ATTLIST INTERVIEWER_INFORMATION InterviewersEmployerCity          CDATA  #IMPLIED>
+
+<!ATTLIST INTERVIEWER_INFORMATION InterviewersEmployerName          CDATA  #IMPLIED>
+
+<!ATTLIST INTERVIEWER_INFORMATION InterviewersEmployerPostalCode    CDATA  #IMPLIED>
+
+<!ATTLIST INTERVIEWER_INFORMATION InterviewersEmployerState         CDATA  #IMPLIED>
+
+<!ATTLIST INTERVIEWER_INFORMATION InterviewersEmployerStreetAddress CDATA  #IMPLIED>
+
+<!ATTLIST INTERVIEWER_INFORMATION InterviewersName                  CDATA  #IMPLIED>
+
+<!ATTLIST INTERVIEWER_INFORMATION InterviewersTelephoneNumber       CDATA  #IMPLIED>
+
+<!ELEMENT LIABILITY (EXTENSION_LIABILITY?,
+			ERROR*)>
+
+<!ATTLIST LIABILITY _ID                                 ID      #IMPLIED>
+
+<!ATTLIST LIABILITY BorrowerID                          IDREFS  #IMPLIED>
+
+<!ATTLIST LIABILITY REO_ID                              IDREF   #IMPLIED>
+
+<!ATTLIST LIABILITY AlimonyOwedToName                   CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY _AccountIdentifier                  CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY _ExclusionIndicator               (Y | N )  #IMPLIED>
+
+<!ATTLIST LIABILITY _HolderCity                         CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY _HolderName                         CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY _HolderPostalCode                   CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY _HolderState                        CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY _HolderStreetAddress                CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY _MonthlyPaymentAmount               CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY _PayoffStatusIndicator            (Y | N )  #IMPLIED>
+
+<!ATTLIST LIABILITY _PayoffWithCurrentAssetsIndicator (Y | N )  #IMPLIED>
+
+<!ATTLIST LIABILITY _RemainingTermMonths                CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY _Type       (Alimony |
+                 BorrowerEstimatedTotalMonthlyLiabilityPayment |
+                 ChildCare |
+                 ChildSupport |
+                 CollectionsJudgementsAndLiens |
+                 DeferredStudentLoan |
+                 DelinquentTaxes |
+                 FirstMortgageBeingFinanced |
+                 Garnishments |
+                 HELOC |
+                 Installment |
+                 JobRelatedExpenses |
+                 LeasePayments |
+                 MortgageLoan |
+                 Open30DayChargeAccount |
+                 OtherExpense |
+                 OtherLiability |
+                 Revolving |
+                 SeparateMaintenanceExpense |
+                 Taxes |
+                 UnionDues |
+                 UnsecuredHomeImprovementLoanInstallment |
+                 UnsecuredHomeImprovementLoanRevolving )  #IMPLIED>
+
+<!ATTLIST LIABILITY _TypeOtherDescription               CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY _UnpaidBalanceAmount                CDATA   #IMPLIED>
+
+<!ATTLIST LIABILITY SubjectLoanResubordinationIndicator  (Y | N )  #IMPLIED>
+
+<!ELEMENT EXTENSION_LIABILITY (ERROR*)>
+
+<!ATTLIST EXTENSION_LIABILITY _ID                                 ID     #IMPLIED>
+
+<!ATTLIST EXTENSION_LIABILITY LiabilityPartialPayoffIndicator       (Y | N )  #IMPLIED>
+
+<!ATTLIST EXTENSION_LIABILITY LiabilityPartialPayoffAmount       CDATA  #IMPLIED>
+
+<!ELEMENT LOAN_PRODUCT_DATA (ERROR*, ARM? , BUYDOWN* , LOAN_FEATURES? , PAYMENT_ADJUSTMENT* , RATE_ADJUSTMENT*)>
+
+<!ATTLIST LOAN_PRODUCT_DATA  _ID ID  #IMPLIED >
+<!ELEMENT ARM (ERROR*)>
+
+<!ATTLIST ARM _ID                                 ID     #IMPLIED>
+
+<!ATTLIST ARM _ConversionOptionIndicator       (Y | N )  #IMPLIED>
+
+<!ATTLIST ARM _IndexCurrentValuePercent           CDATA  #IMPLIED>
+
+<!ATTLIST ARM _IndexMarginPercent                 CDATA  #IMPLIED>
+
+<!ATTLIST ARM _IndexType
+                        (DailyCertificateOfDepositRate |
+             EleventhDistrictCostOfFunds |
+             FederalCostOfFunds |
+             FNM60DayRequiredNetYield |
+             FNM_LIBOR |
+             FRE60DayRequiredNetYield |
+             FRE_LIBOR |
+             LIBOR |
+             MonthlyAverageConstantMaturingTreasury |
+             NationalAverageContractRateFHLBB |
+             NationalMonthlyMedianCostOfFunds |
+             OneYearTreasury |
+             Other |
+             SixMonthTreasury |
+             ThreeYearTreasury |
+             TreasuryBillDailyValue |
+             WallStreetJournalLIBOR |
+             WeeklyAverageCertificateOfDepositRate |
+             WeeklyAverageConstantMaturingTreasury |
+             WeeklyAveragePrimeRate |
+             WeeklyAverageSecondaryMarketTreasuryBillInvestmentYield |
+             WeeklyAverageTreasuryAuctionAverageBondDiscountYield |
+             WeeklyAverageTreasuryAuctionAverageInvestmentYield ) #IMPLIED>
+
+<!ATTLIST ARM _IndexTypeOtherDescription          CDATA  #IMPLIED>
+
+<!ATTLIST ARM _QualifyingRatePercent              CDATA  #IMPLIED>
+
+<!ATTLIST ARM PaymentAdjustmentLifetimeCapAmount  CDATA  #IMPLIED>
+
+<!ATTLIST ARM PaymentAdjustmentLifetimeCapPercent CDATA  #IMPLIED>
+
+<!ATTLIST ARM RateAdjustmentLifetimeCapPercent    CDATA  #IMPLIED>
+
+<!ELEMENT BUYDOWN (ERROR*)>
+
+<!ATTLIST BUYDOWN _ID                             ID     #IMPLIED>
+
+<!ATTLIST BUYDOWN _BaseDateType              (FirstPaymentDate |
+                                              LastPaymentDate |
+                                              NoteDate |
+                                              Other )  #IMPLIED>
+
+<!ATTLIST BUYDOWN _BaseDateTypeOtherDescription    CDATA  #IMPLIED>
+
+<!ATTLIST BUYDOWN _ChangeFrequencyMonths           CDATA  #IMPLIED>
+
+<!--#DOCUMENTATION:Source of the buydown funds. Enumerated-->
+<!ATTLIST BUYDOWN _ContributorType           (Borrower |
+                                              Builder |
+                                              Employer |
+                                              Financed |
+                                              LenderPremiumFinanced |
+                                              NonParentRelative |
+                                              Other |
+                                              Parent |
+                                              Seller |
+                                              Unassigned |
+                                              UnrelatedFriend )  #IMPLIED>
+
+<!ATTLIST BUYDOWN _ContributorTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST BUYDOWN _DurationMonths                  CDATA  #IMPLIED>
+
+<!ATTLIST BUYDOWN _IncreaseRatePercent             CDATA  #IMPLIED>
+
+<!ATTLIST BUYDOWN _LenderFundingIndicator       (Y | N )  #IMPLIED>
+
+<!ATTLIST BUYDOWN _PermanentIndicator           (Y | N )  #IMPLIED>
+
+<!ELEMENT LOAN_FEATURES (ERROR*)>
+
+<!ATTLIST LOAN_FEATURES _ID                        ID     #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES AssumabilityIndicator   (Y | N )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES BalloonIndicator        (Y | N )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES BalloonLoanMaturityTermMonths            CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES BuydownTemporarySubsidyIndicator      (Y | N )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES CounselingConfirmationIndicator       (Y | N )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES DownPaymentOptionType
+                         (FivePercentOption |
+                          FNM97Option |
+                          Other |
+                          ThreeTwoOption )      #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES DownPaymentOptionTypeOtherDescription    CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES EscrowWaiverIndicator                 (Y | N )  #IMPLIED>
+
+<!--#DOCUMENTATION:Used by LP to identify the specific type of product -->
+<!-- offering. String                                                  -->
+<!ATTLIST LOAN_FEATURES FREOfferingIdentifier                    CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES FREProjectClassificationType     (ICondominium |
+                                                          IICondominium |
+                                                          IIICondominium |
+                                                          Other )       #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES FREProjectClassificationTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES FNMProductPlanIdentifier                 CDATA  #IMPLIED>
+
+<!--Mark for deprecation in future non-backwardly compatible release-->
+<!--#DOCUMENTATION:PID-040 String-->
+<!ATTLIST LOAN_FEATURES FNMProductPlanIndentifier                 CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES FNMProjectClassificationType     (E_PUD |
+                                                          F_PUD |
+                                                          OneCooperative |
+                                                          Other |
+                                                          PCondominium |
+                                                          QCondominium |
+                                                          RCondominium |
+                                                          SCondominium |
+                                                          TCondominium |
+                                                          TwoCooperative |
+                                                          UCondominium )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES FNMProjectClassificationTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES FullPrepaymentPenaltyOptionType     (Hard | Soft )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES GSEProjectClassificationType     (A_IIICondominium |
+                                                          ApprovedFHA_VACondominiumProjectOrSpotLoan |
+                                                          B_IICondominium |
+                                                          C_ICondominium |
+                                                          E_PUD |
+                                                          F_PUD |
+                                                          III_PUD |
+                                                          OneCooperative |
+                                                          TwoCooperative )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES GSEPropertyType
+                 (Attached |
+                  Condominium |
+                  Cooperative |
+                  Detached |
+                  DetachedCondominium |
+                  HighRiseCondominium |
+                  ManufacturedHomeCondominium |
+                  ManufacturedHomeCondominiumOrPUDOrCooperative |
+                  ManufacturedHousing |
+                  ManufacturedHousingDoubleWide |
+                  ManufacturedHousingMultiWide |
+                  ManufacturedHousingSingleWide |
+                  Modular |
+                  PUD )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES HELOCInitialAdvanceAmount         CDATA  #IMPLIED>
+
+<!--#DOCUMENTATION:Maximum dollar amount of credit available on all    -->
+<!-- HELOCs on the subject property, regardless of whether the         -->
+<!-- borrower has accessed the amount.                                 -->
+<!ATTLIST LOAN_FEATURES HELOCMaximumBalanceAmount         CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES InterestOnlyTerm                  CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES LenderSelfInsuredIndicator     (Y | N )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES LienPriorityType         (FirstLien |
+                          FourthLien |
+                          Other |
+                          SecondLien |
+                          ThirdLien )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES LienPriorityTypeOtherDescription    CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES LoanClosingStatusType     (Closed | TableFunded )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES LoanDocumentationType
+                 (Alternative |
+          FullDocumentation |
+          NoDepositVerification |
+          NoDepositVerificationEmploymentVerificationOrIncomeVerification |
+          NoDocumentation |
+          NoEmploymentVerificationOrIncomeVerification |
+          NoIncomeNoEmploymentNoAssetsOn1003 |
+          NoIncomeOn1003 |
+          NoRatio |
+          NoVerificationOfStatedAssets |
+          NoVerificationOfStatedIncome |
+          NoVerificationOfStatedIncomeEmploymentOrAssets |
+          NoVerificationOfStatedIncomeOrAssets |
+          NoVerificationOfStatedIncomeOrEmployment |
+          OnePaystub |
+          OnePaystubAndOneW2AndVerbalVerificationOfEmploymentOrOneYear1040 |
+          OnePaystubAndVerbalVerificationOfEmployment |
+          Other |
+          Reduced |
+          StreamlineRefinance |
+          VerbalVerificationOfEmployment )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES LoanDocumentationTypeOtherDescription      CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES LoanRepaymentType (ConstantPrincipal |
+                       InterestOnly |
+                       NoNegativeAmortization |
+                       Other |
+                       PotentialNegativeAmortization |
+                       PrincipalPaymentOption |
+                       ScheduledAmortization |
+                                           ScheduledNegativeAmortization )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES LoanRepaymentTypeOtherDescription          CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES LoanScheduledClosingDate                   CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES MICertificationStatusType  (LenderToObtain |
+                                                    Other |
+                                                    SellerOfLoanToObtain )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES MICertificationStatusTypeOtherDescription    CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES MICoveragePercent                            CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES MICompanyNameType   (AmerinGuaranteeCorporation |
+                                             CMG_MICompany |
+                                             CommonwealthMortgageAssuranceCompany |
+                                             GenworthMortgageInsuranceCorporation |
+                                             MortgageGuarantyInsuranceCorporation |
+                                             Other |
+                                             PMI_MICorporation |
+                                             RadianGuarantyIncorporated |
+                                             RepublicMICompany |
+                                             TriadGuarantyInsuranceCorporation |
+                                             UnitedGuarantyCorporation )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES MICompanyNameTypeOtherDescription          CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES NameDocumentsDrawnInType         (Broker |
+                                                          Investor |
+                                                          Lender |
+                                                          Other )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES NameDocumentsDrawnInTypeOtherDescription     CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES NegativeAmortizationLimitMonthsCount         CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES NegativeAmortizationLimitPercent             CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES NegativeAmortizationType
+                                          (NoNegativeAmortization |
+                                           PotentialNegativeAmortization |
+                                           ScheduledNegativeAmortization )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES PaymentFrequencyType             (Annual |
+                                                          AtMaturity |
+                                                          Biweekly |
+                                                          Monthly |
+                                                          Other |
+                                                          Quarterly |
+                                                          Semiannual |
+                                                          Semimonthly |
+                                                          Weekly )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES PaymentFrequencyTypeOtherDescription         CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES PrepaymentPenaltyIndicator                (Y | N )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES PrepaymentPenaltyTermMonths                  CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES PrepaymentRestrictionIndicator            (Y | N )  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES ProductDescription                           CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES ProductName CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES ScheduledFirstPaymentDate                    CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_FEATURES ServicingTransferStatusType (Retained | Released )  #IMPLIED>
+
+<!ELEMENT PAYMENT_ADJUSTMENT (ERROR*)>
+
+<!ATTLIST PAYMENT_ADJUSTMENT _ID                               ID     #IMPLIED>
+
+<!ATTLIST PAYMENT_ADJUSTMENT FirstPaymentAdjustmentMonths      CDATA  #IMPLIED>
+
+<!ATTLIST PAYMENT_ADJUSTMENT _Amount                           CDATA  #IMPLIED>
+
+<!ATTLIST PAYMENT_ADJUSTMENT _CalculationType (AddFixedDollarAmountToTheCurrentPayment |
+                                               AddPercentToCurrentPaymentAmount |
+                                               AddPercentToEffectivePaymentRate |
+                                               Other )  #IMPLIED>
+
+<!ATTLIST PAYMENT_ADJUSTMENT _CalculationTypeOtherDescription  CDATA  #IMPLIED>
+
+<!ATTLIST PAYMENT_ADJUSTMENT _DurationMonths                   CDATA  #IMPLIED>
+
+<!ATTLIST PAYMENT_ADJUSTMENT _Percent                          CDATA  #IMPLIED>
+
+<!ATTLIST PAYMENT_ADJUSTMENT _PeriodicCapAmount                CDATA  #IMPLIED>
+
+<!ATTLIST PAYMENT_ADJUSTMENT _PeriodicCapPercent               CDATA  #IMPLIED>
+
+<!ATTLIST PAYMENT_ADJUSTMENT _PeriodNumber                     CDATA  #IMPLIED>
+
+<!ATTLIST PAYMENT_ADJUSTMENT SubsequentPaymentAdjustmentMonths CDATA  #IMPLIED>
+
+<!ELEMENT RATE_ADJUSTMENT (ERROR*)>
+
+<!ATTLIST RATE_ADJUSTMENT _ID                              ID     #IMPLIED>
+
+<!ATTLIST RATE_ADJUSTMENT FirstRateAdjustmentMonths        CDATA  #IMPLIED>
+
+<!ATTLIST RATE_ADJUSTMENT _CalculationType   (AddPercentToCurrentRate |
+                                              AddPercentToOriginalRate |
+                                              IndexPlusMargin |
+                                              Other )  #IMPLIED>
+
+<!ATTLIST RATE_ADJUSTMENT _DurationMonths                  CDATA  #IMPLIED>
+
+<!ATTLIST RATE_ADJUSTMENT _Percent                         CDATA  #IMPLIED>
+
+<!ATTLIST RATE_ADJUSTMENT _PeriodNumber                    CDATA  #IMPLIED>
+
+<!ATTLIST RATE_ADJUSTMENT _SubsequentCapPercent            CDATA  #IMPLIED>
+
+<!ATTLIST RATE_ADJUSTMENT SubsequentRateAdjustmentMonths   CDATA  #IMPLIED>
+
+<!ATTLIST RATE_ADJUSTMENT _CalculationTypeOtherDescription CDATA  #IMPLIED>
+
+<!ELEMENT LOAN_PURPOSE (ERROR*, CONSTRUCTION_REFINANCE_DATA?)>
+
+<!ATTLIST LOAN_PURPOSE _ID                                ID     #IMPLIED>
+
+<!ATTLIST LOAN_PURPOSE GSETitleMannerHeldDescription      CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_PURPOSE _Type                   (ConstructionOnly |
+                                                ConstructionToPermanent |
+                                                Other |
+                                                Purchase |
+                                                Refinance |
+                                                Unknown )  #IMPLIED>
+
+<!ATTLIST LOAN_PURPOSE OtherLoanPurposeDescription        CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_PURPOSE PropertyLeaseholdExpirationDate    CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_PURPOSE PropertyRightsType      (CommunityProperty |
+                                                FeeSimple |
+                                                JointTenants |
+                                                Leasehold |
+                                                Other |
+                                                TenantsInCommon |
+                                                Unassigned )  #IMPLIED>
+
+<!ATTLIST LOAN_PURPOSE PropertyRightsTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST LOAN_PURPOSE PropertyUsageType       (Investment |
+                                                Other |
+                                                PrimaryResidence |
+                                                SecondHome )  #IMPLIED>
+
+<!ATTLIST LOAN_PURPOSE PropertyUsageTypeOtherDescription  CDATA  #IMPLIED>
+
+<!ELEMENT CONSTRUCTION_REFINANCE_DATA (ERROR*)>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA _ID                                                       ID     #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA ConstructionImprovementCostsAmount                        CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA ConstructionPurposeType                                    (ConstructionOnly |
+                                      ConstructionToPermanent )  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA ConstructionToPermanentClosingFeatureType                  (AutomaticConversion |
+                                      ConvertibleARM |
+                                      ModificationAgreement |
+                                      NewNote |
+                                      Other )  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA
+          ConstructionToPermanentClosingFeatureTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA ConstructionToPermanentClosingType                         (OneClosing |
+                                      Other |
+                                      TwoClosing )  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA
+          ConstructionToPermanentClosingTypeOtherDescription        CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA
+      FNMSecondMortgageFinancingOriginalPropertyIndicator        (Y | N )  #IMPLIED>
+
+<!--#DOCUMENTATION:The amount of cash the borrower will receive at the -->
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA FRECashOutAmount                                          CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA GSERefinancePurposeType                                    (CashOutDebtConsolidation |
+                                      CashOutHomeImprovement |
+                                      CashOutLimited |
+                                      CashOutOther |
+                                      ChangeInRateTerm |
+                                      NoCashOutFHAStreamlinedRefinance |
+                                      NoCashOutFREOwnedRefinance |
+                                      NoCashOutOther |
+                                      NoCashOutStreamlinedRefinance |
+                                      Other )  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA GSERefinancePurposeTypeOtherDescription                   CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA LandEstimatedValueAmount                                  CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA LandOriginalCostAmount                                    CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA NonStructuralAlterationsConventionalAmount                CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA PropertyAcquiredYear                                      CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA PropertyExistingLienAmount                                CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA PropertyOriginalCostAmount                                CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA RefinanceImprovementCostsAmount                           CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA RefinanceImprovementsType                                  (Made |
+                                                ToBeMade |
+                                                Unknown )  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA RefinanceProposedImprovementsDescription                  CDATA  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA SecondaryFinancingRefinanceIndicator                       (Y | N )  #IMPLIED>
+
+<!ATTLIST CONSTRUCTION_REFINANCE_DATA StructuralAlterationsConventionalAmount                   CDATA  #IMPLIED>
+
+<!ELEMENT LOAN_QUALIFICATION (ERROR*)>
+
+<!ATTLIST LOAN_QUALIFICATION _ID                               ID  #IMPLIED>
+
+<!ATTLIST LOAN_QUALIFICATION AdditionalBorrowerAssetsConsideredIndicator  (Y | N )  #IMPLIED>
+
+<!ATTLIST LOAN_QUALIFICATION AdditionalBorrowerAssetsNotConsideredIndicator (Y | N )  #IMPLIED>
+
+<!ELEMENT MORTGAGE_TERMS (ERROR*)>
+
+<!ATTLIST MORTGAGE_TERMS _ID                              ID     #IMPLIED>
+
+<!ATTLIST MORTGAGE_TERMS AgencyCaseIdentifier             CDATA  #IMPLIED>
+
+<!ATTLIST MORTGAGE_TERMS ARMTypeDescription               CDATA  #IMPLIED>
+
+<!ATTLIST MORTGAGE_TERMS BaseLoanAmount                   CDATA  #IMPLIED>
+
+<!ATTLIST MORTGAGE_TERMS BorrowerRequestedLoanAmount      CDATA  #IMPLIED>
+
+<!ATTLIST MORTGAGE_TERMS LenderCaseIdentifier             CDATA  #IMPLIED>
+
+<!ATTLIST MORTGAGE_TERMS LoanAmortizationTermMonths       CDATA  #IMPLIED>
+
+<!ATTLIST MORTGAGE_TERMS LoanAmortizationType
+                                             (AdjustableRate |
+                                              DailySimpleInterest |
+                                              Fixed |
+                                              GraduatedPaymentARM |
+                                              GraduatedPaymentMortgage |
+                                              GrowingEquityMortgage |
+                                              OtherAmortizationType |
+                                              RateImprovementMortgage |
+                                              ReverseMortgage |
+                                              Step )  #IMPLIED>
+
+<!--Note: Farmers Home Administration is the same as Farm Service Agency, or Rural Housing Service or
+USDA/Rural Housing Service-->
+<!ATTLIST MORTGAGE_TERMS MortgageType        (Conventional |
+                                              FarmersHomeAdministration |
+                                              FHA |
+                                              HELOC |
+                                              LocalAgency |
+                                              Other |
+                                              StateAgency |
+                                              VA )  #IMPLIED>
+
+<!ATTLIST MORTGAGE_TERMS OtherAmortizationTypeDescription CDATA  #IMPLIED>
+
+<!ATTLIST MORTGAGE_TERMS OtherMortgageTypeDescription     CDATA  #IMPLIED>
+
+<!ATTLIST MORTGAGE_TERMS RequestedInterestRatePercent     CDATA  #IMPLIED>
+
+<!ELEMENT PROPERTY (ERROR*, _LEGAL_DESCRIPTION* ,
+                    PARSED_STREET_ADDRESS? ,
+                    _VALUATION* ,
+                    _CATEGORY* ,
+                    PROJECT? ,
+                    SELLER*,
+                    EXTENSION_PROPERTY*)>
+
+<!ELEMENT EXTENSION_PROPERTY (ERROR*)>
+
+<!ATTLIST PROPERTY _ID                   ID     #IMPLIED>
+
+<!--#DOCUMENTATION:Physical status of the structure. Enumerated-->
+<!ATTLIST PROPERTY BuildingStatusType         (Complete |
+                                               Existing |
+                                               Other |
+                                               Proposed |
+                                               SubjectToAlterationImprovementRepairAndRehabilitation |
+                                               SubstantiallyRehabilitated |
+                                               UnderConstruction )  #IMPLIED>
+
+<!ATTLIST PROPERTY BuildingStatusTypeOtherDescription      CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY CurrentVacancyStatusType (Occupied | Unknown | Vacant )  #IMPLIED>
+
+<!ATTLIST PROPERTY GrossLivingAreaSquareFeetCount          CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY ManufacturedHomeManufactureYear         CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY NativeAmericanLandsType            (AllottedTribalLand |
+                                                       HawaiianHomeLand |
+                                                       Other )  #IMPLIED>
+
+<!ATTLIST PROPERTY NativeAmericanLandsTypeOtherDescription    CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY PlannedUnitDevelopmentIndicator        (Y | N )  #IMPLIED>
+
+<!ATTLIST PROPERTY _AcquiredDate                             CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _AcreageNumber                            CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _City                                     CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _CommunityLandTrustIndicator           (Y | N )  #IMPLIED>
+
+<!ATTLIST PROPERTY _County                                   CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _FinancedNumberOfUnits                    CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _InclusionaryZoningIndicator            (Y | N)  #IMPLIED>
+
+<!ATTLIST PROPERTY _NeighborhoodLocationType          (Other |
+                                                       Rural |
+                                                       Suburban |
+                                                       Urban )  #IMPLIED>
+
+<!ATTLIST PROPERTY _NeighborhoodLocationTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _OwnershipType                     (Condominium |
+                                                       CondominiumHotel |
+                                                       Cooperative |
+                                                       Other |
+                                                       Timeshare )  #IMPLIED>
+
+<!ATTLIST PROPERTY _OwnershipTypeOtherDescription            CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _PostalCode                               CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _State                                    CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _StreetAddress                            CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _StreetAddress2                           CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _StructureBuiltYear                       CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY _ZoningCategoryType      (Agricultural |
+                                             Commercial |
+                                             Industrial |
+                                             NoZoning |
+                                             NonResidentialGrandfatheredResidential |
+                                             Other |
+                                             Residential )          #IMPLIED>
+
+<!ATTLIST PROPERTY _ZoningCategoryTypeOtherDescription       CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY StoriesCount                              CDATA  #IMPLIED>
+
+<!ATTLIST PROPERTY UniqueDwellingType         (EarthShelterHome |
+                                               GeodesicDome |
+                                               Houseboat |
+                                               Other )  #IMPLIED>
+
+<!ATTLIST PROPERTY UniqueDwellingTypeOtherDescription        CDATA  #IMPLIED>
+
+<!ELEMENT PARSED_STREET_ADDRESS (ERROR*)>
+
+<!ATTLIST PARSED_STREET_ADDRESS    _ID               ID     #IMPLIED
+                                   _ApartmentOrUnit  CDATA  #IMPLIED
+                                   _BuildingNumber   CDATA  #IMPLIED
+                                   _DirectionPrefix  CDATA  #IMPLIED
+                                   _DirectionSuffix  CDATA  #IMPLIED
+                                   _HouseNumber      CDATA  #IMPLIED
+                                   _Military_APO_FPO CDATA  #IMPLIED
+                                   _PostOfficeBox    CDATA  #IMPLIED
+                                   _RuralRoute       CDATA  #IMPLIED
+                                   _StreetName       CDATA  #IMPLIED
+                                   _StreetSuffix     CDATA  #IMPLIED>
+
+<!ELEMENT _VALUATION (ERROR*, APPRAISER*,
+                              EXTENSION_VALUATION*)>
+
+<!ATTLIST _VALUATION _ID                              ID     #IMPLIED>
+
+<!ATTLIST _VALUATION AppraisalFormType              (ERC2001 |
+                                                     FNM1004FRE70 |
+                                                     FNM1004BFRE439 |
+                                                     FNM1004CFRE70B |
+                                                     FNM1004DFRE442 |
+                                                     FNM1025FRE72 |
+                                                     FNM1073FRE465 |
+                                                     FNM1075FRE466 |
+                                                     FNM2000FRE1032 |
+                                                     FNM2000AFRE1072 |
+                                                     FNM2055FRE2055 |
+                                                     FNM2065 |
+                                                     FNM2075 |
+                                                     FNM2090 |
+                                                     FNM2095 |
+                                                     FRE2070 |
+                                                     MobileHome |
+                                                     Other |
+                                                     VacantLand )  #IMPLIED>
+
+<!ATTLIST _VALUATION AppraisalFormTypeOtherDescription       CDATA  #IMPLIED>
+
+<!ATTLIST _VALUATION AppraisalFormVersionIdentifier          CDATA  #IMPLIED>
+
+<!ATTLIST _VALUATION AppraisalInspectionType        (ExteriorAndInterior |
+                                                     ExteriorOnly |
+                                                     None |
+                                                     Other )  #IMPLIED>
+
+<!ATTLIST _VALUATION AppraisalInspectionTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST _VALUATION _MethodType                    (AutomatedValuationModel |
+                                                     BrokerPriceOpinion |
+                                                     DriveBy |
+                                                     EmployeeRelocationCouncil2001 |
+                                                     FNM1004 |
+                                                     FNM1025 |
+                                                     FNM1073 |
+                                                     FNM2055Exterior |
+                                                     FNM2055InteriorAndExterior |
+                                                     FNM2065 |
+                                                     FRE2070Exterior |
+                                                     FRE2070Interior |
+                                                     FNM2075 |
+                                                     FNM2095Exterior |
+                                                     FNM2095InteriorAndExterior |
+                                                     Form261805 |
+                                                     Form268712 |
+                                                     FullAppraisal |
+                                                     None |
+                                                     Other |
+                                                     PriorAppraisalUsed |
+                                                     TaxValuation )  #IMPLIED>
+
+<!ATTLIST _VALUATION _MethodTypeOtherDescription              CDATA  #IMPLIED>
+
+<!ELEMENT APPRAISER (ERROR*)>
+
+<!ATTLIST APPRAISER _ID                ID     #IMPLIED>
+
+<!ATTLIST APPRAISER _CompanyName       CDATA  #IMPLIED>
+
+<!ATTLIST APPRAISER _LicenseIdentifier CDATA  #IMPLIED>
+
+<!ATTLIST APPRAISER _LicenseState      CDATA  #IMPLIED>
+
+<!ATTLIST APPRAISER _Name              CDATA  #IMPLIED>
+
+<!ELEMENT EXTENSION_VALUATION (ERROR*)>
+
+<!ATTLIST EXTENSION_VALUATION _ID                        ID     #IMPLIED>
+
+<!ATTLIST EXTENSION_VALUATION AppraisalIdentifier       CDATA  #IMPLIED>
+
+
+<!ELEMENT _LEGAL_DESCRIPTION (ERROR*)>
+
+<!ATTLIST _LEGAL_DESCRIPTION _ID       ID     #IMPLIED>
+
+<!ATTLIST _LEGAL_DESCRIPTION _TextDescription      CDATA  #IMPLIED>
+
+<!ATTLIST _LEGAL_DESCRIPTION _Type  (LongLegal |
+                                     MetesAndBounds |
+                                     Other |
+                                     ShortLegal )  #IMPLIED>
+
+<!ATTLIST _LEGAL_DESCRIPTION _TypeOtherDescription CDATA  #IMPLIED>
+
+<!ELEMENT PROPOSED_HOUSING_EXPENSE (ERROR*)>
+
+<!ATTLIST PROPOSED_HOUSING_EXPENSE _ID             ID     #IMPLIED>
+
+<!ATTLIST PROPOSED_HOUSING_EXPENSE HousingExpenseType
+                              (FirstMortgagePITI |
+                               FirstMortgagePrincipalAndInterest |
+                               GroundRent |
+                               HazardInsurance |
+                               HomeownersAssociationDuesAndCondominiumFees |
+                               LeaseholdPayments |
+                               MaintenanceAndMiscellaneous |
+                               MI |
+                               OtherHousingExpense |
+                               OtherMortgageLoanPrincipalAndInterest |
+                               OtherMortgageLoanPrincipalInterestTaxesAndInsurance |
+                               RealEstateTax |
+                               Rent |
+                               Utilities )  #IMPLIED>
+
+<!ATTLIST PROPOSED_HOUSING_EXPENSE HousingExpenseTypeOtherDescription CDATA #IMPLIED>
+
+<!ATTLIST PROPOSED_HOUSING_EXPENSE _PaymentAmount                     CDATA #IMPLIED>
+
+<!ELEMENT REO_PROPERTY (ERROR*)>
+
+<!ATTLIST REO_PROPERTY REO_ID                     ID      #IMPLIED>
+
+<!ATTLIST REO_PROPERTY BorrowerID                 IDREFS  #IMPLIED>
+
+<!ATTLIST REO_PROPERTY LiabilityID                IDREFS  #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _City                      CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _CurrentResidenceIndicator  (Y | N )  #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _DispositionStatusType (PendingSale |
+                                               RetainForPrimaryOrSecondaryResidence |
+                                               RetainForRental |
+                                               Sold )  #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _GSEPropertyType       (CommercialNonResidential |
+                        Condominium |
+                        Cooperative |
+                        Farm |
+                        HomeAndBusinessCombined |
+                        Land |
+                        ManufacturedMobileHome |
+                        MixedUseResidential |
+                        MultifamilyMoreThanFourUnits |
+                        SingleFamily |
+                        Townhouse |
+                        TwoToFourUnitProperty )  #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _LienInstallmentAmount     CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _LienUPBAmount             CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _MaintenanceExpenseAmount  CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _MarketValueAmount         CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _PostalCode                CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _RentalIncomeGrossAmount   CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _RentalIncomeNetAmount     CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _State                     CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _StreetAddress             CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _StreetAddress2            CDATA   #IMPLIED>
+
+<!ATTLIST REO_PROPERTY _SubjectIndicator        (Y | N )  #IMPLIED>
+
+<!ELEMENT TRANSACTION_DETAIL (ERROR*, PURCHASE_CREDIT*, EXTENSION_TRANSACTION_DETAIL?)>
+
+<!ATTLIST TRANSACTION_DETAIL _ID                                     ID     #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL AlterationsImprovementsAndRepairsAmount CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL BorrowerPaidDiscountPointsTotalAmount   CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL EstimatedClosingCostsAmount             CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL FREReserveAmount                        CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL FREReservesAmount                       CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL MIAndFundingFeeFinancedAmount           CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL MIAndFundingFeeTotalAmount              CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL PrepaidItemsEstimatedAmount             CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL PurchasePriceAmount                     CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL RefinanceIncludingDebtsToBePaidOffAmount CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL SalesConcessionAmount                    CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL SellerPaidClosingCostsAmount             CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL SubordinateLienAmount                    CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL SubordinateLienHELOCAmount               CDATA  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL SubordinateLienPurposeType        (Cash |
+                                Convenience |
+                                DebtConsolidation |
+                                Education |
+                                HomeImprovement |
+                                Medical |
+                                PurchaseMoney |
+                                Other |
+                                RateTerm )  #IMPLIED>
+
+<!ATTLIST TRANSACTION_DETAIL SubordinateLienPurposeTypeOtherDescription CDATA  #IMPLIED>
+
+<!ELEMENT EXTENSION_TRANSACTION_DETAIL (ERROR*)>
+
+<!ATTLIST EXTENSION_TRANSACTION_DETAIL _ID                             ID     #IMPLIED>
+
+<!ATTLIST EXTENSION_TRANSACTION_DETAIL TotalDiscountPointsAmount       CDATA  #IMPLIED>
+
+<!ELEMENT PURCHASE_CREDIT (ERROR*)>
+
+<!ATTLIST PURCHASE_CREDIT _ID                         ID     #IMPLIED>
+
+<!ATTLIST PURCHASE_CREDIT _Amount                     CDATA  #IMPLIED>
+
+<!ATTLIST PURCHASE_CREDIT _SourceType   (BorrowerPaidOutsideClosing |
+                                         BuilderDeveloper |
+                                         Employer |
+                                         FederalAgency |
+                                         Lender |
+                                         LocalAgency |
+                                         NonParentRelative |
+                                         Other |
+                                         Parent |
+                                         PropertySeller |
+                                         RealEstateAgent |
+                                         StateAgency |
+                                         UnrelatedFriend )  #IMPLIED>
+
+<!ATTLIST PURCHASE_CREDIT _SourceTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST PURCHASE_CREDIT _Type         (BuydownFund |
+                                         CommitmentOriginationFee |
+                                         EarnestMoney |
+                                         EmployerAssistedHousing |
+                                         GiftOfEquity |
+                                         LeasePurchaseFund |
+                                         Other |
+                                         PrivateMIMIPremiumVAFundingFeeRefund |
+                                         RelocationFunds |
+                                         SweatEquity |
+                                         TradeEquity )  #IMPLIED>
+
+<!ATTLIST PURCHASE_CREDIT _TypeOtherDescription       CDATA  #IMPLIED>
+
+<!ELEMENT BORROWER (ERROR*, _ALIAS* ,
+                    _MAIL_TO? ,
+                    _RESIDENCE* ,
+                    CURRENT_INCOME* ,
+                    DECLARATION? ,
+                    DEPENDENT* ,
+                    EMPLOYER* ,
+                    FHA_VA_BORROWER? ,
+                    GOVERNMENT_MONITORING? ,
+                    PRESENT_HOUSING_EXPENSE* ,
+                    SUMMARY* ,
+                    VA_BORROWER? ,
+                    CONTACT_POINT*)>
+
+<!ATTLIST BORROWER BorrowerID                       ID     #IMPLIED>
+
+<!ATTLIST BORROWER JointAssetBorrowerID             IDREF  #IMPLIED>
+
+<!ATTLIST BORROWER _AgeAtApplicationYears           CDATA  #IMPLIED>
+
+<!ATTLIST BORROWER _ApplicationSignedDate           CDATA  #IMPLIED>
+
+<!ATTLIST BORROWER _BirthDate                       CDATA  #IMPLIED>
+
+<!ATTLIST BORROWER _FirstName                       CDATA  #REQUIRED>
+
+<!ATTLIST BORROWER _HomeTelephoneNumber             CDATA  #IMPLIED>
+
+<!ATTLIST BORROWER _LastName                        CDATA  #REQUIRED>
+
+<!ATTLIST BORROWER _MiddleName                      CDATA  #IMPLIED>
+
+<!ATTLIST BORROWER _NameSuffix                      CDATA  #IMPLIED>
+
+<!ATTLIST BORROWER _PrintPositionType          (Borrower | CoBorrower )  #IMPLIED>
+
+<!ATTLIST BORROWER _SSN                             CDATA  #REQUIRED>
+
+<!ATTLIST BORROWER CreditReportIdentifier           CDATA  #IMPLIED>
+
+<!ATTLIST BORROWER DependentCount                   CDATA  #IMPLIED>
+
+<!ATTLIST BORROWER JointAssetLiabilityReportingType (Jointly | NotJointly )  #IMPLIED>
+
+<!ATTLIST BORROWER MaritalStatusType         (Married |
+                                              NotProvided |
+                                              Separated |
+                                              Unknown |
+                                              Unmarried )  #IMPLIED>
+
+<!ATTLIST BORROWER SchoolingYears             CDATA  #IMPLIED>
+
+<!ELEMENT CONTACT_POINT (ERROR*)>
+
+<!ATTLIST CONTACT_POINT    _ID                      ID     #IMPLIED
+                           _PreferenceIndicator  (Y | N )  #IMPLIED
+                           _RoleType              (Home |
+                                                   Mobile |
+                                                   Other |
+                                                   Work )  #IMPLIED
+                           _RoleTypeOtherDescription CDATA  #IMPLIED
+                           _Type            (Email | Fax | Other | Phone )  #IMPLIED
+                           _TypeOtherDescription     CDATA  #IMPLIED
+                           _Value                    CDATA  #IMPLIED >
+<!ELEMENT _ALIAS (ERROR*)>
+
+<!ATTLIST _ALIAS _ID         ID     #IMPLIED>
+
+<!ATTLIST _ALIAS _FirstName  CDATA  #IMPLIED>
+
+<!ATTLIST _ALIAS _LastName   CDATA  #IMPLIED>
+
+<!ATTLIST _ALIAS _MiddleName CDATA  #IMPLIED>
+
+<!ATTLIST _ALIAS _NameSuffix CDATA  #IMPLIED>
+
+<!ELEMENT _MAIL_TO (ERROR*)>
+
+<!ATTLIST _MAIL_TO _ID                             ID     #IMPLIED>
+
+<!ATTLIST _MAIL_TO _AddressSameAsPropertyIndicator  (Y | N )  #IMPLIED>
+
+<!ATTLIST _MAIL_TO _City                           CDATA  #IMPLIED>
+
+<!ATTLIST _MAIL_TO _Country                        CDATA  #IMPLIED>
+
+<!ATTLIST _MAIL_TO _PostalCode                     CDATA  #IMPLIED>
+
+<!ATTLIST _MAIL_TO _State                          CDATA  #IMPLIED>
+
+<!ATTLIST _MAIL_TO _StreetAddress                  CDATA  #IMPLIED>
+
+<!ATTLIST _MAIL_TO _StreetAddress2                 CDATA  #IMPLIED>
+
+<!ELEMENT _RESIDENCE (ERROR*)>
+
+<!ATTLIST _RESIDENCE _ID                           ID     #IMPLIED>
+
+<!ATTLIST _RESIDENCE _City                         CDATA  #IMPLIED>
+
+<!--#DOCUMENTATION:Country in which Borrower's residence is located if -->
+<!-- not in USA. String                                                -->
+<!ATTLIST _RESIDENCE _Country                        CDATA  #IMPLIED>
+
+<!ATTLIST _RESIDENCE _PostalCode                     CDATA  #IMPLIED>
+
+<!ATTLIST _RESIDENCE _State                          CDATA  #IMPLIED>
+
+<!ATTLIST _RESIDENCE _StreetAddress                  CDATA  #IMPLIED>
+
+<!ATTLIST _RESIDENCE _StreetAddress2                 CDATA  #IMPLIED>
+
+<!ATTLIST _RESIDENCE BorrowerResidencyBasisType       (LivingRentFree |
+                                                       Own |
+                                                       Rent |
+                                                       Unknown )  #IMPLIED>
+
+<!ATTLIST _RESIDENCE BorrowerResidencyDurationMonths CDATA  #IMPLIED>
+
+<!ATTLIST _RESIDENCE BorrowerResidencyDurationYears  CDATA  #IMPLIED>
+
+<!ATTLIST _RESIDENCE BorrowerResidencyType            (Current | Prior )  #IMPLIED>
+
+<!ELEMENT CURRENT_INCOME (ERROR*)>
+
+<!ATTLIST CURRENT_INCOME _ID                             ID     #IMPLIED>
+
+<!ATTLIST CURRENT_INCOME _MonthlyTotalAmount             CDATA  #IMPLIED>
+
+<!ATTLIST CURRENT_INCOME IncomeFederalTaxExemptIndicator  (Y | N )  #IMPLIED>
+
+<!ATTLIST CURRENT_INCOME IncomeType         (AlimonyChildSupport |
+                                             BoarderIncome |
+                                             AutomobileExpenseAccount |
+                                             Base |
+                                             Bonus |
+                                             BorrowerEstimatedTotalMonthlyIncome |
+                                             Commissions |
+                                             ContractBasis |
+                                             DividendsInterest |
+                                             FosterCare |
+                                             MilitaryBasePay |
+                                             MilitaryClothesAllowance |
+                                             MilitaryCombatPay |
+                                             MilitaryFlightPay |
+                                             MilitaryHazardPay |
+                                             MilitaryOverseasPay |
+                                             MilitaryPropPay |
+                                             MilitaryQuartersAllowance |
+                                             MilitaryRationsAllowance |
+                                             MilitaryVariableHousingAllowance |
+                                             MortgageCreditCertificate |
+                                             TrailingCoBorrowerIncome |
+                                             MortgageDifferential |
+                                             NetRentalIncome |
+                                             NotesReceivableInstallment |
+                                             OtherTypesOfIncome |
+                                             Overtime |
+                                             Pension |
+                                             ProposedGrossRentForSubjectProperty |
+                                             PublicAssistance |
+                                             RealEstateOwnedGrossRentalIncome |
+                                             SocialSecurity |
+                                             SubjectPropertyNetCashFlow |
+                                             Trust |
+                                             Unemployment |
+                                             VABenefitsNonEducational |
+                                             WorkersCompensation )            #IMPLIED>
+
+<!ATTLIST CURRENT_INCOME IncomeTypeOtherDescription      CDATA  #IMPLIED>
+
+<!ELEMENT DECLARATION (ERROR*, _EXPLANATION*)>
+
+<!ATTLIST DECLARATION _ID                                   ID  #IMPLIED>
+
+<!ATTLIST DECLARATION AlimonyChildSupportObligationIndicator     (Y | N )  #IMPLIED>
+
+<!ATTLIST DECLARATION BankruptcyIndicator                        (Y | N )  #IMPLIED>
+
+<!ATTLIST DECLARATION BorrowedDownPaymentIndicator               (Y | N )  #IMPLIED>
+
+<!ATTLIST DECLARATION BorrowerFirstTimeHomebuyerIndicator        (Y | N )  #IMPLIED>
+
+<!ATTLIST DECLARATION CitizenshipResidencyType        (NonPermanentResidentAlien |
+                                                       NonResidentAlien |
+                                                       PermanentResidentAlien |
+                                                       Unknown |
+                                                       USCitizen )  #IMPLIED>
+
+<!ATTLIST DECLARATION CoMakerEndorserOfNoteIndicator    (Y | N )  #IMPLIED>
+
+<!ATTLIST DECLARATION HomeownerPastThreeYearsType   (No | Unknown | Yes )  #IMPLIED>
+
+<!ATTLIST DECLARATION IntentToOccupyType            (No | Unknown | Yes )  #IMPLIED>
+
+<!ATTLIST DECLARATION LoanForeclosureOrJudgementIndicator        (Y | N )  #IMPLIED>
+
+<!ATTLIST DECLARATION OutstandingJudgementsIndicator             (Y | N )  #IMPLIED>
+
+<!ATTLIST DECLARATION PartyToLawsuitIndicator                    (Y | N )  #IMPLIED>
+
+<!ATTLIST DECLARATION PresentlyDelinquentIndicator               (Y | N )  #IMPLIED>
+
+<!ATTLIST DECLARATION PriorPropertyTitleType         (JointWithOtherThanSpouse |
+                                                      JointWithSpouse |
+                                                      Sole )  #IMPLIED>
+
+<!ATTLIST DECLARATION PriorPropertyUsageType         (Investment |
+                                                      PrimaryResidence |
+                                                      SecondaryResidence )  #IMPLIED>
+
+<!ATTLIST DECLARATION PropertyForeclosedPastSevenYearsIndicator  (Y | N )  #IMPLIED>
+
+<!ELEMENT _EXPLANATION (ERROR*)>
+
+<!ATTLIST _EXPLANATION _ID          ID     #IMPLIED>
+
+<!ATTLIST _EXPLANATION _Description CDATA  #IMPLIED>
+
+<!ATTLIST _EXPLANATION _Type     (AlimonyChildSupport |
+                  BorrowedDownPayment |
+                  CoMakerEndorserOnNote |
+                  DeclaredBankruptcyPastSevenYears |
+                  DelinquencyOrDefault |
+                  DirectIndirectForeclosedPropertyPastSevenYears |
+                  ObligatedOnLoanForeclosedOrDeedInLieuOfJudgement |
+                  OutstandingJudgments |
+                  PartyToLawsuit )  #IMPLIED>
+
+<!ELEMENT DEPENDENT (ERROR*)>
+
+<!ATTLIST DEPENDENT _ID       ID     #IMPLIED>
+
+<!ATTLIST DEPENDENT _AgeYears CDATA  #IMPLIED>
+
+<!ELEMENT EMPLOYER (ERROR*)>
+
+<!ATTLIST EMPLOYER _ID                                              ID     #IMPLIED>
+
+<!ATTLIST EMPLOYER CurrentEmploymentMonthsOnJob                     CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER CurrentEmploymentTimeInLineOfWorkYears           CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER CurrentEmploymentYearsOnJob                      CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER EmployedAbroadIndicator                          CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER _City                                            CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER _Country                                         CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER _Name                                            CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER _PostalCode                                      CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER _State                                           CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER _StreetAddress                                   CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER _TelephoneNumber                                 CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER EmploymentBorrowerSelfEmployedIndicator       (Y | N )  #IMPLIED>
+
+<!ATTLIST EMPLOYER EmploymentCurrentIndicator                    (Y | N )  #IMPLIED>
+
+<!ATTLIST EMPLOYER EmploymentPositionDescription                    CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER EmploymentPrimaryIndicator                    (Y | N )  #IMPLIED>
+
+<!ATTLIST EMPLOYER IncomeEmploymentMonthlyAmount                    CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER PreviousEmploymentEndDate                        CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER PreviousEmploymentStartDate                      CDATA  #IMPLIED>
+
+<!ATTLIST EMPLOYER SpecialBorrowerEmployerRelationshipType
+                           (EmployedByRelative |
+                        Other |
+                        PropertySeller |
+                        RealEstateBroker )  #IMPLIED>
+
+<!ATTLIST EMPLOYER SpecialBorrowerEmployerRelationshipTypeOtherDescription CDATA  #IMPLIED>
+
+<!ELEMENT FHA_VA_BORROWER (ERROR*)>
+
+<!ATTLIST FHA_VA_BORROWER _ID                      ID     #IMPLIED>
+
+<!ATTLIST FHA_VA_BORROWER CAIVRSIdentifier         CDATA  #IMPLIED>
+
+<!ATTLIST FHA_VA_BORROWER FNMBankruptcyCount       CDATA  #IMPLIED>
+
+<!ATTLIST FHA_VA_BORROWER FNMBorrowerCreditRating  CDATA  #IMPLIED>
+
+<!ATTLIST FHA_VA_BORROWER FNMCreditReportScoreType  (CreditQuote | FICO )  #IMPLIED>
+
+<!ATTLIST FHA_VA_BORROWER FNMForeclosureCount      CDATA  #IMPLIED>
+
+<!--#DOCUMENTATION:Indicates borrower qualifies as a veteran under HUD -->
+<!--  guidelines and that the loan application should be evaluated as  -->
+<!--  a 203(b)(2) Veteran Loan. If any borrower qualifies as a veteran -->
+<!--  under VA guidelines then the loan (including all borrowers) may  -->
+<!--  be processed as a VA loan application. Boolean                   -->
+<!ATTLIST FHA_VA_BORROWER VeteranStatusIndicator    (Y | N )  #IMPLIED>
+
+<!ELEMENT GOVERNMENT_MONITORING (ERROR*, HMDA_RACE*, GOVERNMENT_MONITORING_EXTENSION?)>
+
+<!ATTLIST GOVERNMENT_MONITORING _ID                                ID     #IMPLIED>
+
+<!ATTLIST GOVERNMENT_MONITORING GenderType     (Female |
+                                                InformationNotProvidedUnknown |
+                                                Male |
+                                                NotApplicable )  #IMPLIED>
+
+<!ATTLIST GOVERNMENT_MONITORING HMDAEthnicityType
+             (HispanicOrLatino |
+              InformationNotProvidedByApplicantInMailInternetOrTelephoneApplication |
+              NotApplicable |
+              NotHispanicOrLatino )  #IMPLIED>
+
+<!-- Deprecate OtherRaceNationalOriginDescription in a future non-backwardly compatible release -->
+
+<!ATTLIST GOVERNMENT_MONITORING OtherRaceNationalOriginDescription CDATA  #IMPLIED>
+
+<!ATTLIST GOVERNMENT_MONITORING RaceNationalOriginRefusalIndicator  (Y | N )  #IMPLIED>
+
+<!--Deprecate RaceNationalOriginType in a future non-backwardly compatible release -->
+
+<!ATTLIST GOVERNMENT_MONITORING RaceNationalOriginType
+                                               (AmericanIndianOrAlaskanNative |
+                                                AsianOrPacificIslander |
+                                                BlackNotOfHispanicOrigin |
+                                                Hispanic |
+                                                InformationNotProvided |
+                                                NotApplicable |
+                                                Other |
+                                                WhiteNotOfHispanicOrigin )  #IMPLIED>
+
+<!ELEMENT HMDA_RACE (ERROR*)>
+
+<!ATTLIST HMDA_RACE  _ID     ID  #IMPLIED
+                 _Type  (AmericanIndianOrAlaskaNative |
+                     Asian |
+                     BlackOrAfricanAmerican |
+                     InformationNotProvidedByApplicantInMailInternetOrTelephoneApplication |
+                     NativeHawaiianOrOtherPacificIslander |
+                     NotApplicable |
+                     White )  #IMPLIED >
+
+<!--
+            New HMDA Requirements
+-->
+
+<!--Define GOVERNMENT_MONITORING_EXTENSION and child elements-->
+<!ELEMENT GOVERNMENT_MONITORING_EXTENSION (ERROR*, GOVERNMENT_MONITORING_DETAIL?, HMDA_ETHNICITIES?, HMDA_ETHNICITY_ORIGINS?, HMDA_RACES?)>
+
+<!--Define HMDA_ETHNICITY_ORIGINS and repeating child element-->
+<!ELEMENT HMDA_ETHNICITY_ORIGINS (ERROR*, HMDA_ETHNICITY_ORIGIN*)>
+<!ATTLIST HMDA_ETHNICITY_ORIGINS _ID                                ID     #IMPLIED>
+
+<!ELEMENT HMDA_ETHNICITY_ORIGIN (ERROR*)>
+<!ATTLIST HMDA_ETHNICITY_ORIGIN _ID                                ID     #IMPLIED>
+<!ATTLIST HMDA_ETHNICITY_ORIGIN  
+HMDAEthnicityOriginType (Cuban | Mexican | Other | PuertoRican) #IMPLIED
+>
+<!ATTLIST HMDA_ETHNICITY_ORIGIN HMDAEthnicityOriginTypeOtherDescription CDATA #IMPLIED>
+
+<!--Define HMDA_ETHNICITY structure and child elements-->
+<!ELEMENT HMDA_ETHNICITIES (ERROR*, HMDA_ETHNICITY*)>
+<!ATTLIST HMDA_ETHNICITIES _ID                                ID     #IMPLIED>
+<!ELEMENT HMDA_ETHNICITY (ERROR*)>
+<!ATTLIST HMDA_ETHNICITY _ID                                ID     #IMPLIED>
+
+<!ATTLIST HMDA_ETHNICITY
+HMDAEthnicityType (HispanicOrLatino | InformationNotProvidedByApplicantInMailInternetOrTelephoneApplication | NotApplicable | NotHispanicOrLatino) #IMPLIED
+>
+
+<!--Define HMDA_RACES structure and child elements-->
+<!ELEMENT HMDA_RACES (ERROR*, HMDA_RACE_EXTENSION*)>
+<!ATTLIST HMDA_RACES _ID                                ID     #IMPLIED>
+
+<!ELEMENT HMDA_RACE_EXTENSION (ERROR*, HMDA_RACE_DETAIL?, HMDA_RACE_DESIGNATIONS?)>
+<!ATTLIST HMDA_RACE_EXTENSION _ID                                ID     #IMPLIED>
+
+<!ELEMENT HMDA_RACE_DETAIL (ERROR*)>
+<!ATTLIST HMDA_RACE_DETAIL _ID                                ID     #IMPLIED>
+
+<!ATTLIST HMDA_RACE_DETAIL
+            HMDARaceType (AmericanIndianOrAlaskaNative | Asian | BlackOrAfricanAmerican | InformationNotProvidedByApplicantInMailInternetOrTelephoneApplication| 
+                        NativeHawaiianOrOtherPacificIslander | NotApplicable | White) #IMPLIED>
+<!ATTLIST HMDA_RACE_DETAIL
+            HMDARaceTypeAdditionalDescription  CDATA #IMPLIED
+>
+
+<!ELEMENT HMDA_RACE_DESIGNATIONS (ERROR*, HMDA_RACE_DESIGNATION*)>
+<!ATTLIST HMDA_RACE_DESIGNATIONS _ID                                ID     #IMPLIED>
+<!ELEMENT HMDA_RACE_DESIGNATION (ERROR*)>
+<!ATTLIST HMDA_RACE_DESIGNATION _ID                                ID     #IMPLIED>
+
+
+<!ATTLIST HMDA_RACE_DESIGNATION            
+            HMDARaceDesignationOtherAsianDescription CDATA #IMPLIED
+>
+<!ATTLIST HMDA_RACE_DESIGNATION            
+            HMDARaceDesignationOtherPacificIslanderDescription CDATA #IMPLIED
+>
+<!ATTLIST HMDA_RACE_DESIGNATION 
+            HMDARaceDesignationType (AsianIndian | Chinese | Filipino | GuamanianOrChamorro | Japanese | Korean | NativeHawaiian | Other | OtherAsian | OtherPacificIslander | Samoan | Vietnamese) #IMPLIED>
+<!ATTLIST HMDA_RACE_DESIGNATION            
+            HMDARaceDesignationTypeOtherDescription CDATA #IMPLIED
+>
+
+<!--Define GOVERNMENT_MONITORING_DETAIL child elements-->
+
+<!ELEMENT GOVERNMENT_MONITORING_DETAIL (ERROR*)>
+<!ATTLIST GOVERNMENT_MONITORING_DETAIL _ID                                ID     #IMPLIED>
+
+<!ATTLIST GOVERNMENT_MONITORING_DETAIL
+			ApplicationTakenMethodType (FaceToFace | Internet | Mail | Telephone )    #IMPLIED>
+ 
+ <!ATTLIST GOVERNMENT_MONITORING_DETAIL 
+            HMDAEthnicityCollectedBasedOnVisualObservationOrSurnameIndicator (Y | N) #IMPLIED
+>
+
+<!ATTLIST GOVERNMENT_MONITORING_DETAIL 
+            HMDAEthnicityRefusalIndicator (Y | N) #IMPLIED
+>
+
+<!ATTLIST GOVERNMENT_MONITORING_DETAIL 
+            HMDAGenderCollectedBasedOnVisualObservationOrNameIndicator (Y | N) #IMPLIED
+>
+
+<!ATTLIST GOVERNMENT_MONITORING_DETAIL 
+            HMDAGenderRefusalIndicator (Y | N) #IMPLIED
+>
+<!ATTLIST GOVERNMENT_MONITORING_DETAIL 
+            HMDAGenderType (Female | InformationNotProvidedUnknown | Male | NotApplicable | ApplicantSelectedBothMaleAndFemale ) #IMPLIED
+>
+
+<!ATTLIST GOVERNMENT_MONITORING_DETAIL 
+            HMDARaceCollectedBasedOnVisualObservationOrSurnameIndicator (Y | N) #IMPLIED
+>
+
+<!ATTLIST GOVERNMENT_MONITORING_DETAIL 
+            HMDARaceRefusalIndicator (Y | N) #IMPLIED
+>
+
+<!ELEMENT PRESENT_HOUSING_EXPENSE (ERROR*)>
+
+<!ATTLIST PRESENT_HOUSING_EXPENSE _ID                                ID     #IMPLIED>
+
+<!ATTLIST PRESENT_HOUSING_EXPENSE HousingExpenseType
+                                     (FirstMortgagePITI |
+                                      FirstMortgagePrincipalAndInterest |
+                                      GroundRent |
+                                      HazardInsurance |
+                                      HomeownersAssociationDuesAndCondominiumFees |
+                                      LeaseholdPayments |
+                                      MaintenanceAndMiscellaneous |
+                                      MI |
+                                      OtherHousingExpense |
+                                      OtherMortgageLoanPrincipalAndInterest |
+                                      OtherMortgageLoanPrincipalInterestTaxesAndInsurance |
+                                      RealEstateTax |
+                                      Rent |
+                                      Utilities )  #IMPLIED>
+
+<!ATTLIST PRESENT_HOUSING_EXPENSE HousingExpenseTypeOtherDescription CDATA  #IMPLIED>
+
+<!ATTLIST PRESENT_HOUSING_EXPENSE _PaymentAmount                     CDATA  #IMPLIED>
+
+<!ELEMENT SUMMARY (ERROR*)>
+
+<!ATTLIST SUMMARY _ID                         ID     #IMPLIED>
+
+<!ATTLIST SUMMARY _Amount                     CDATA  #IMPLIED>
+
+<!ATTLIST SUMMARY _AmountType           (Other |
+                                         SubtotalLiabilitiesForRentalPropertyBalance |
+                                         SubtotalLiabilitiesForRentalPropertyMonthlyPayment |
+                                         SubtotalLiabilitesMonthlyPayment |
+SubtotalLiabilitiesMonthlyPayment |
+                                         SubtotalLiabilitiesPaidByClosingNotIncludingSubjectPropertyLiensBalance |
+                                         SubtotalLiabilitiesPaidByClosingNotIncludingSubjectPropertyLiensMonthlyPayment |
+                                         SubtotalLiquidAssetsNotIncludingGift |
+                                         SubtotalNonLiquidAssets |
+                                         SubtotalOmittedLiabilitesBalance |
+SubtotalOmittedLiabilitiesBalance |
+                                         SubtotalOmittedLiabilitiesMonthlyPayment |
+                                         SubtotalResubordinatedLiabilitiesBalanceForSubjectProperty |
+                                         SubtotalResubordinatedLiabilitesMonthlyPaymentForSubjectProperty |
+
+SubtotalResubordinatedLiabilitiesMonthlyPaymentForSubjectProperty |
+                                         SubtotalSubjectPropertyLiensPaidByClosingBalance |
+                                         SubtotalSubjectPropertyLiensPaidByClosingMonthlyPayment |
+                                         TotalLiabilitesBalance |
+TotalLiabilitiesBalance |
+                                         TotalMonthlyIncomeNotIncludingNetRentalIncome |
+                                         TotalPresentHousingExpense |
+                                         UndrawnHELOC )  #IMPLIED>
+
+<!ATTLIST SUMMARY _AmountTypeOtherDescription CDATA  #IMPLIED>
+
+<!ELEMENT VA_BORROWER (ERROR*)>
+
+<!ATTLIST VA_BORROWER _ID                                     ID     #IMPLIED>
+
+<!ATTLIST VA_BORROWER VACoBorrowerNonTaxableIncomeAmount      CDATA  #IMPLIED>
+
+<!ATTLIST VA_BORROWER VACoBorrowerTaxableIncomeAmount         CDATA  #IMPLIED>
+
+<!ATTLIST VA_BORROWER VAFederalTaxAmount                      CDATA  #IMPLIED>
+
+<!ATTLIST VA_BORROWER VALocalTaxAmount                        CDATA  #IMPLIED>
+
+<!ATTLIST VA_BORROWER VAPrimaryBorrowerNonTaxableIncomeAmount CDATA  #IMPLIED>
+
+<!ATTLIST VA_BORROWER VAPrimaryBorrowerTaxableIncomeAmount    CDATA  #IMPLIED>
+
+<!ATTLIST VA_BORROWER VASocialSecurityTaxAmount               CDATA  #IMPLIED>
+
+<!ATTLIST VA_BORROWER VAStateTaxAmount                        CDATA  #IMPLIED>
+
+<!ELEMENT _CATEGORY (ERROR*)>
+
+<!ATTLIST _CATEGORY  _ID           ID     #IMPLIED
+                                   _Type      (Attached |
+                                               Church |
+                                               CommercialNonResidential |
+                                               CommercialResidential |
+                                               Detached |
+                                               Farm |
+                                               HighRise |
+                                               LandAndLots |
+                                               LowRise |
+                                               Manufactured |
+                                               ManufacturedMultiWide |
+                                               ManufacturedSingleWide |
+                                               MobileHome |
+                                               Modular |
+                                               Other |
+                                               SiteBuilt |
+                                               Stacked |
+                                               TownhouseRowhouse )  #IMPLIED
+                       _TypeOtherDescription CDATA  #IMPLIED >
+<!ELEMENT PROJECT (ERROR*)>
+
+<!ATTLIST PROJECT  _ID  ID     #IMPLIED
+                        LivingUnitCount                 CDATA  #IMPLIED
+                        _ClassificationType            (Condominium |
+                                                        Cooperative |
+                                                        Other |
+                                                        PUD )  #IMPLIED
+                        _ClassificationTypeOtherDescription CDATA  #IMPLIED
+                        _DesignType                    (Attached |
+                                                        Detached |
+                                                        GardenProject |
+                                                        HighRiseProject |
+                                                        MidriseProject |
+                                                        Other |
+                                                        TownhouseRowhouse )  #IMPLIED
+                     _DesignTypeOtherDescription         CDATA  #IMPLIED >
+<!ELEMENT SELLER (ERROR*, CONTACT_DETAIL? , NON_PERSON_ENTITY_DETAIL*)>
+
+<!ATTLIST SELLER  _ID                      ID     #IMPLIED
+                    NonPersonEntityIndicator  (Y | N )  #IMPLIED
+                    _City                    CDATA  #IMPLIED
+                    _Country                 CDATA  #IMPLIED
+                    _FirstName               CDATA  #IMPLIED
+                    _Identifier              CDATA  #IMPLIED
+                    _LastName                CDATA  #IMPLIED
+                    _MiddleName              CDATA  #IMPLIED
+                    _NameSuffix              CDATA  #IMPLIED
+                    _PostalCode              CDATA  #IMPLIED
+                    _State                   CDATA  #IMPLIED
+                    _StreetAddress           CDATA  #IMPLIED
+                    _StreetAddress2          CDATA  #IMPLIED
+                    _UnparsedName            CDATA  #IMPLIED >
+                    
+
+<!ELEMENT CONTACT_DETAIL (ERROR*, CONTACT_POINT*)>
+
+<!ATTLIST CONTACT_DETAIL  _ID   ID     #IMPLIED
+                            _Name CDATA  #IMPLIED >
+<!ELEMENT NON_PERSON_ENTITY_DETAIL (AUTHORIZED_REPRESENTATIVE*)>
+
+<!ATTLIST NON_PERSON_ENTITY_DETAIL
+             _ID  ID                                 #IMPLIED
+             MERSOrganizationIdentifier  CDATA  #IMPLIED
+             _OrganizationType      (Corporation |
+                         JointVenture |
+                         LimitedLiabilityCompany |
+                         LimitedPartnership |
+                         NonProfitCorporation |
+                         Other |
+                         Partnership |
+                         SoleProprietorship |
+                         Trust )  #IMPLIED
+                 _OrganizationTypeOtherDescription        CDATA  #IMPLIED
+                 _OrganizedUnderTheLawsOfJurisdictionName CDATA  #IMPLIED
+                 _SuccessorClauseTextDescription          CDATA  #IMPLIED
+                 _TaxIdentificationNumberIdentifier       CDATA  #IMPLIED
+                 _OrganizationLicensingTypeDescription    CDATA  #IMPLIED >
+
+<!ELEMENT AUTHORIZED_REPRESENTATIVE (CONTACT_DETAIL?)>
+
+<!ATTLIST AUTHORIZED_REPRESENTATIVE    _ID                       ID     #IMPLIED
+                                       _TitleDescription         CDATA  #IMPLIED
+                                       _UnparsedName             CDATA  #IMPLIED
+                                       AuthorizedToSignIndicator  (Y | N )  #IMPLIED >
+<!ELEMENT LOAN_ORIGINATION_SYSTEM (ERROR*)>
+
+<!ATTLIST LOAN_ORIGINATION_SYSTEM    _ID                ID     #IMPLIED
+                                     _LoanIdentifier    CDATA  #IMPLIED
+                                     _Name              CDATA  #IMPLIED
+                                     _VendorIdentifier  CDATA  #IMPLIED
+                                     _VersionIdentifier CDATA  #IMPLIED >
+
+<!ELEMENT CLOSING_AGENT (CONTACT_DETAIL? , NON_PERSON_ENTITY_DETAIL*)>
+
+<!ATTLIST CLOSING_AGENT  _ID                      ID     #IMPLIED
+                           _City                    CDATA  #IMPLIED
+                           _Country                 CDATA  #IMPLIED
+                           _County                  CDATA  #IMPLIED
+                           _OrderNumberIdentifier   CDATA  #IMPLIED
+                           _PostalCode              CDATA  #IMPLIED
+                           _State                   CDATA  #IMPLIED
+                           _StreetAddress           CDATA  #IMPLIED
+                           _StreetAddress2          CDATA  #IMPLIED
+                           _Type                    (Attorney |
+                                                     ClosingAgent |
+                                                     EscrowCompany |
+                                                     Other |
+                                                     SettlementAgent |
+                                                     TitleCompany )  #IMPLIED
+                           _TypeOtherDescription    CDATA  #IMPLIED
+                           _UnparsedName            CDATA  #IMPLIED
+                           NonPersonEntityIndicator (Y | N )  #IMPLIED >
+<!ELEMENT INVESTOR_FEATURE (ERROR*)>
+
+<!ATTLIST INVESTOR_FEATURE  _ID           ID     #IMPLIED
+                              _CategoryName CDATA  #IMPLIED
+                              _Description  CDATA  #IMPLIED
+                              _Identifier   CDATA  #IMPLIED
+                              _Name         CDATA  #IMPLIED >
+<!ELEMENT TITLE_HOLDER (ERROR*)>
+
+<!ATTLIST TITLE_HOLDER  _ID                           ID     #IMPLIED
+                        _Name                         CDATA  #IMPLIED
+                        LandTrustType                (IllinoisLandTrust | Other )  #IMPLIED
+                        LandTrustTypeOtherDescription CDATA  #IMPLIED >
+
+
+<!ELEMENT EXTENSION_LOAN_APPLICATION (FUNCTION_REQUEST,
+        SERVICE_REQUEST*,
+        FRE_REQUESTING_PARTY,
+        MERGED_CREDIT_REQUEST?,
+        VERIFICATION_REPORT_REQUEST*,
+        LOAN_IDENTIFIER_DATA?,
+        POLLING_STATUS?) >
+<!ATTLIST EXTENSION_LOAN_APPLICATION  FRELoanProspectorVersionIdentifier CDATA  #IMPLIED>
+
+<!ELEMENT FUNCTION_REQUEST (ERROR*)>
+<!ATTLIST FUNCTION_REQUEST _Type (ServiceRequest |
+                                  LoanTransferRequest |
+                                  PollingRequest |
+                                  Other ) #IMPLIED>
+<!ATTLIST FUNCTION_REQUEST _TypeOtherDescription CDATA #IMPLIED>
+
+<!ELEMENT SERVICE_REQUEST (ERROR*)>
+<!ATTLIST SERVICE_REQUEST _Description CDATA   #IMPLIED>
+
+<!ELEMENT FRE_REQUESTING_PARTY (ERROR*)>
+<!ATTLIST FRE_REQUESTING_PARTY
+    SellerServicerNumber               CDATA  #REQUIRED
+    ThirdPartyOriginatorIdentifier     CDATA  #IMPLIED
+    NonOriginatingThirdPartyIdentifier CDATA  #IMPLIED
+    UserIdentifier                     CDATA  #IMPLIED
+    Password                           CDATA  #IMPLIED>
+
+<!ELEMENT MERGED_CREDIT_REQUEST (ERROR*, CREDIT_BUREAU, FRE_MERGED_CREDIT_SPECIFICATIONS*)>
+
+<!ELEMENT CREDIT_BUREAU    (ERROR*)>
+<!ATTLIST CREDIT_BUREAU
+    _Name                           CDATA    #IMPLIED
+    _StreetAddress                  CDATA    #IMPLIED
+    _StreetAddress2                 CDATA    #IMPLIED
+    _City                           CDATA    #IMPLIED
+    _State                          CDATA    #IMPLIED
+    _PostalCode                     CDATA    #IMPLIED>
+
+<!ELEMENT FRE_MERGED_CREDIT_SPECIFICATIONS (ERROR*)>
+<!ATTLIST FRE_MERGED_CREDIT_SPECIFICATIONS
+    _Description CDATA #IMPLIED>
+    
+<!ELEMENT VERIFICATION_REPORT_REQUEST (ERROR*, REPORT_IDENTIFICATION+,
+ 				       PARTY_IDENTIFICATION*)>  
+<!ATTLIST VERIFICATION_REPORT_REQUEST 
+    CompanyCode		        CDATA #REQUIRED
+    VerificationType		CDATA #REQUIRED>  
+
+<!ELEMENT REPORT_IDENTIFICATION EMPTY>
+<!ATTLIST REPORT_IDENTIFICATION
+    ReportNumber		CDATA #REQUIRED>
+
+<!ELEMENT PARTY_IDENTIFICATION EMPTY>
+<!ATTLIST PARTY_IDENTIFICATION
+    SocialSecurityNumber		        CDATA #REQUIRED>  
+
+
+
+<!ELEMENT LOAN_IDENTIFIER_DATA (ERROR*)>
+<!ATTLIST LOAN_IDENTIFIER_DATA
+        LoanProspectorKeyIdentifier            CDATA  #IMPLIED
+        LoanProspectorLoanIdentifier           CDATA  #IMPLIED
+        FRELoanProspectorTransactionIdentifier CDATA  #IMPLIED
+        GloballyUniqueIdentifier               CDATA  #IMPLIED>
+
+<!ELEMENT POLLING_STATUS (ERROR*)>
+<!ATTLIST POLLING_STATUS
+        LoanProspectorAsynchronousIdentifier   CDATA  #IMPLIED
+        PollingInterval                        CDATA  #IMPLIED>
